@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="">
+  <![endif]-->
+  <!--[if IE 7]>
+  <html class="no-js lt-ie9 lt-ie8" lang="">
+    <![endif]-->
+    <!--[if IE 8]>
+    <html class="no-js lt-ie9" lang="">
+      <![endif]-->
+      <!--[if gt IE 8]>
+      >
+      <! <![endif]-->
+      <html class="no-js" lang="">
+        <!-- <![endif] -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+$(function() {
+    $("head").load("partials/head.html");
+    $("#header").load("partials/header.html");
+    $("#menu-wrapper").load("partials/nav.html");
+    $("#footer").load("partials/footer.html");
+});
+</script>
+
+<head>
+        <meta charset="utf-8"></head>
+        <!-- /.inside-page -->
+
+<body>
+        <header id="header"></header>
+        <div id="menu-wrapper"></div>
+        <!--[if lt IE 8]>
+        <p class="browserupgrade">
+          You are using an <strong>outdated</strong>
+          browser. Please
+          <a href="http://browsehappy.com/">upgrade your browser</a>
+          to improve your experience.
+        </p>
+        <![endif]-->
+        <div id="content">
+          <div class="container">
+            <div class="row inside_page music_detail_page artist-inside clearfix">
+              <div class="col-xs-12">
+                <div class="left_c">
+                  <div class="list-albums artists">
+                    <!-- <div class="title-min">Дискография</div>
+                  -->
+                  <h2 class="title-new">Исполнители maximum</h2>
+                  <div role="tabpanel" id="tabs-default">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                      <li role="presentation">
+                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">Новинки</a>
+                      </li>
+                      <li role="presentation" class="active">
+                        <a href="#tab" aria-controls="tab" role="tab" data-toggle="tab">Исполнители</a>
+                      </li>
+                      <li role="presentation">
+                        <a href="#musicpane" aria-controls="musicpane" role="tab" data-toggle="tab">Музыка</a>
+                      </li>
+                      <div class="search-box">
+                        <div class="box">
+                          <div class="container-1">
+                            <span class="icon"> <i class="fa fa-search"></i>
+                            </span>
+                            <input type="search" id="search" placeholder="Поиск группы или исполнителя..." />
+                          </div>
+                        </div>
+                      </div>
+                    </ul>
+                    <!-- nav nav-tabs -->
+                    <div class="custom-sort clearfix">
+                      <div class="get-all">
+                        <a href="#/">Все</a>
+                      </div>
+                      <div class="words-pane">
+                        <div class="row-1 row-en">
+                          <a href="#/">0-9</a>
+                          <a href="#/">A</a>
+                          <a href="#/">B</a>
+                          <a href="#/">C</a>
+                          <a href="#/">D</a>
+                          <a href="#/">E</a>
+                          <a href="#/">F</a>
+                          <a href="#/">G</a>
+                          <a href="#/">H</a>
+                          <a href="#/">I</a>
+                          <a href="#/">J</a>
+                          <a href="#/">K</a>
+                          <a href="#/">L</a>
+                          <a href="#/">M</a>
+                          <a href="#/">N</a>
+                          <a href="#/">O</a>
+                          <a href="#/">P</a>
+                          <a href="#/">Q</a>
+                          <a href="#/">R</a>
+                          <a href="#/">S</a>
+                          <a href="#/">T</a>
+                          <a href="#/">U</a>
+                          <a href="#/">V</a>
+                          <a href="#/">W</a>
+                          <a href="#/">X</a>
+                          <a href="#/">Y</a>
+                          <a href="#/">Z</a>
+                        </div>
+                        <div class="row-2 row-ru">
+                          <a href="#/">А</a>
+                          <a href="#/">Б</a>
+                          <a href="#/">В</a>
+                          <a href="#/">Г</a>
+                          <a href="#/">Д</a>
+                          <a href="#/">Е</a>
+                          <a href="#/">Ё</a>
+                          <a href="#/">Ж</a>
+                          <a href="#/">З</a>
+                          <a href="#/">И</a>
+                          <a href="#/">Й</a>
+                          <a href="#/">К</a>
+                          <a href="#/">Л</a>
+                          <a href="#/">М</a>
+                          <a href="#/">Н</a>
+                          <a href="#/">О</a>
+                          <a href="#/">П</a>
+                          <a href="#/">Р</a>
+                          <a href="#/">С</a>
+                          <a href="#/">Т</a>
+                          <a href="#/">У</a>
+                          <a href="#/">Ф</a>
+                          <a href="#/">Х</a>
+                          <a href="#/">Ц</a>
+                          <a href="#/">Ч</a>
+                          <a href="#/">Ш</a>
+                          <a href="#/">Щ</a>
+                          <a href="#/">Ы</a>
+                          <a href="#/">Э</a>
+                          <a href="#/">Ю</a>
+                          <a href="#/">Я</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Tab panes -->
+                    <div class="tab-content show-view">
+                      <div role="tabpanel" class="tab-pane" id="home">
+                        <div class="sort-title">
+                          <p>0-9</p>
+                        </div>
+                        <div class="row-2 row-ru">
+                          <a href="#/">А</a>
+                          <a href="#/">Б</a>
+                          <a href="#/">В</a>
+                          <a href="#/">Г</a>
+                          <a href="#/">Д</a>
+                          <a href="#/">Е</a>
+                          <a href="#/">Ё</a>
+                          <a href="#/">Ж</a>
+                          <a href="#/">З</a>
+                          <a href="#/">И</a>
+                          <a href="#/">Й</a>
+                          <a href="#/">К</a>
+                          <a href="#/">Л</a>
+                          <a href="#/">М</a>
+                          <a href="#/">Н</a>
+                          <a href="#/">О</a>
+                          <a href="#/">П</a>
+                          <a href="#/">Р</a>
+                          <a href="#/">С</a>
+                          <a href="#/">Т</a>
+                          <a href="#/">У</a>
+                          <a href="#/">Ф</a>
+                          <a href="#/">Х</a>
+                          <a href="#/">Ц</a>
+                          <a href="#/">Ч</a>
+                          <a href="#/">Ш</a>
+                          <a href="#/">Щ</a>
+                          <a href="#/">Ы</a>
+                          <a href="#/">Э</a>
+                          <a href="#/">Ю</a>
+                          <a href="#/">Я</a>
+                        </div>
+                      </div>
+                      <div role="tabpane2" class="tab-pane active" id="tab">
+                      <div class="sort-title">
+                        <p>0-9</p>
+                      </div>
+                        <div class="albums clearfix">
+                          <div class="album-box">
+                            <a href="#">
+                              <img src="images/artist-pic.jpg"></a>
+                            <a href="#/" class="item-name">1 Giant leap</a>
+                            <div class="quantity">10 треков</div>
+                          </div>
+                          <div class="album-box">
+                            <a href="#">
+                              <img src="images/artist-mus.jpg"></a>
+                            <a href="#/" class="item-name">3 Doors down</a>
+                            <div class="quantity">10 треков</div>
+                          </div>
+                          <div class="album-box">
+                            <a href="#">
+                              <img src="images/artist-pic.jpg"></a>
+                            <a href="#/" class="item-name">Hyo</a>
+                            <div class="quantity">10 треков</div>
+                          </div>
+                          <div class="album-box">
+                            <a href="#">
+                              <img src="images/artist-mus.jpg"></a>
+                            <a href="#/" class="item-name">Malinda</a>
+                            <div class="quantity">10 треков</div>
+                          </div>
+                          <div class="album-box">
+                            <a href="#">
+                              <img src="images/artist-mus.jpg"></a>
+                            <a href="#/" class="item-name">Dwight</a>
+                            <div class="quantity">10 треков</div>
+                          </div>
+                          <div class="album-box">
+                            <a href="#">
+                              <img src="images/artist-pic.jpg"></a>
+                            <a href="#/" class="item-name">Birdie</a>
+                            <div class="quantity">10 треков</div>
+                          </div>
+                          <div class="album-box">
+                            <a href="#">
+                              <img src="images/artist-mus.jpg"></a>
+                            <a href="#/" class="item-name">30 SECONDS TO MARS</a>
+                            <div class="quantity">10 треков</div>
+                          </div>
+                          <div class="album-box">
+                            <a href="#">
+                              <img src="images/artist-pic.jpg"></a>
+                            <a href="#/" class="item-name">Lynnette</a>
+                            <div class="quantity">10 треков</div>
+                          </div>
+                        </div>
+
+                        <div class="sort-title">
+                          <p>А</p>
+                        </div>
+
+                        <div class="albums clearfix">
+                          <div class="album-box">
+                            <a href="#">
+                              <img src="images/artist-mus2.jpg"></a>
+                            <a href="#/" class="item-name">1 Giant leap</a>
+                            <div class="quantity">10 треков</div>
+                          </div>
+                          <div class="album-box">
+                            <a href="#">
+                              <img src="images/artist-mus.jpg"></a>
+                            <a href="#/" class="item-name">3 Doors down</a>
+                            <div class="quantity">10 треков</div>
+                          </div>
+                          <div class="album-box">
+                            <a href="#">
+                              <img src="images/artist-mus2.jpg"></a>
+                            <a href="#/" class="item-name">Hyo</a>
+                            <div class="quantity">10 треков</div>
+                          </div>
+                          <div class="album-box">
+                            <a href="#">
+                              <img src="images/artist-mus.jpg"></a>
+                            <a href="#/" class="item-name">Malinda</a>
+                            <div class="quantity">10 треков</div>
+                          </div>
+                          <div class="album-box">
+                            <a href="#">
+                              <img src="images/artist-mus.jpg"></a>
+                            <a href="#/" class="item-name">Dwight</a>
+                            <div class="quantity">10 треков</div>
+                          </div>
+                          <div class="album-box">
+                            <a href="#">
+                              <img src="images/artist-mus2.jpg"></a>
+                            <a href="#/" class="item-name">Birdie</a>
+                            <div class="quantity">10 треков</div>
+                          </div>
+                          <div class="album-box">
+                            <a href="#">
+                              <img src="images/artist-mus.jpg"></a>
+                            <a href="#/" class="item-name">30 SECONDS TO MARS</a>
+                            <div class="quantity">10 треков</div>
+                          </div>
+                          <div class="album-box">
+                            <a href="#">
+                              <img src="images/artist-mus2.jpg"></a>
+                            <a href="#/" class="item-name">Lynnette</a>
+                            <div class="quantity">10 треков</div>
+                          </div>
+                        </div>
+                        <div class="show-more">
+                          <a href="#/">показать больше</a>
+                        </div>
+                      </div>
+                      <div role="tabpane3" class="tab-pane" id="musicpane">
+                        <div class="album-item">
+                          <div class="pic">
+                            <a href="#/">
+                              <img src="images/album.jpg" alt="" />
+                            </a>
+                          </div>
+                          <div class="info-album">
+                            <div class="name-album">
+                              <a href="#/">Stiff Upper Lip (Australian Tour Edition)</a>
+                            </div>
+                            <div class="year">2001</div>
+                          </div>
+                        </div>
+                        <div class="album-item">
+                          <div class="pic">
+                            <a href="#/">
+                              <img src="images/album.jpg" alt="" />
+                            </a>
+                          </div>
+                          <div class="info-album">
+                            <div class="name-album">
+                              <a href="#/">AC/DC Box Set</a>
+                            </div>
+                            <div class="year">2001</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--list_albums --> </div>
+              <!--left-c-->
+              <div class="right_c">
+                <div class="afisha-box">
+
+                  <div class="title">новинки</div>
+                  <div class="row-single clearfix">
+                    <a href="#/">
+                      <img src="images/afisha-1.jpg"></a>
+                    <div class="text-info">
+                      <a href="#/">
+                        <div class="title">1 Giant leap</div>
+                        <div class="date">All Alone (On Eilean Shona)</div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="row-single clearfix">
+                    <a href="#/">
+                      <img src="images/afisha-1.jpg"></a>
+                    <div class="text-info">
+                      <a href="#/">
+                        <div class="title">2 aumwohnung</div>
+                        <div class="date">Bushes (feat. Baaba Maal)</div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="row-single clearfix">
+                    <a href="#/">
+                      <img src="images/afisha-1.jpg"></a>
+                    <div class="text-info">
+                      <a href="#/">
+                        <div class="title">3 Doors down</div>
+                        <div class="date">Bushes (feat. Baaba Maal)</div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="row-single clearfix">
+                    <a href="#/">
+                      <img src="images/afisha-1.jpg"></a>
+                    <div class="text-info">
+                      <a href="#/">
+                        <div class="title">3 Doors Down Крокус Сити Холл</div>
+                        <div class="date">27 июля 2015</div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="row-single clearfix">
+                    <a href="#/">
+                      <img src="images/afisha-1.jpg"></a>
+                    <div class="text-info">
+                      <a href="#/">
+                        <div class="title">3 Doors Down Крокус Сити Холл</div>
+                        <div class="date">27 июля 2015</div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="row-single clearfix">
+                    <a href="#/">
+                      <img src="images/afisha-1.jpg"></a>
+                    <div class="text-info">
+                      <a href="#/">
+                        <div class="title">3 Doors Down Крокус Сити Холл</div>
+                        <div class="date">27 июля 2015</div>
+                      </a>
+                    </div>
+                  </div>
+                  <a class="all-afish" href="#/">Все новинки</a>
+                </div>
+                <br>
+                <br>
+                <div class="top-block-baner">
+                  <a href="#/">
+                    <img src="images/delfin.jpg" width="240" height="400"></a>
+                </div>
+                <!----> </div>
+            </div>
+          </div>
+        </div>
+        <!-- .container --> </div>
+      <!-- #content -->
+      <footer class="footer" id="footer"></footer>
+</body>
+
+    </html>

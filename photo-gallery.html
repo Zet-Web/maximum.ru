@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="">
+  <![endif]-->
+<!--[if IE 7]>
+  <html class="no-js lt-ie9 lt-ie8" lang="">
+    <![endif]-->
+<!--[if IE 8]>
+    <html class="no-js lt-ie9" lang="">
+      <![endif]-->
+<!--[if gt IE 8]>
+      >
+      <! <![endif]-->
+<html class="no-js" lang="">
+  <!-- <![endif] -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <!--  // <script src="https://cdn.jsdelivr.net/jquery.migrate/1.2.1/jquery-migrate.min.js"></script>-->
+  <script>
+  $(function() {
+    $("#header").load("partials/header.html");
+    $("#menu-wrapper").load("partials/nav.html");
+  });
+  </script>
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="" name="description">
+    <meta content="" width="1200" name="viewport">
+    <title>Maximum</title>
+    <link href="apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/bootstrap-modal-bs3patch.css" rel="stylesheet">
+    <link href="css/bootstrap-modal.css" rel="stylesheet">
+    <link href="css3/main.css" rel="stylesheet">
+    <link href="//vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  </head>
+
+  <body>
+    <header id="header">
+      <div id="links">
+        <li><a href="./adv.html">radio/adv.html</a></li>
+        <li><a href="./afisha.html">radio/afisha.html</a></li>
+        <li><a href="./afisha_inside.html">radio/afisha_inside.html</a></li>
+        <li><a href="./artist.html">radio/artist.html</a></li>
+        <li><a href="./artist-inside.html">radio/artist-inside.html</a></li>
+        <li><a href="./artist-list.html">radio/artist-list.html</a></li>
+        <li><a href="./city.html">radio/city.html</a></li>
+        <li><a href="./contacts.html">radio/contacts.html</a></li>
+        <li><a href="./high-society.html">radio/high-society.html</a></li>
+        <li><a href="./index.html">radio/index.html</a></li>
+        <li><a href="./konkurs.html">radio/konkurs.html</a></li>
+        <li><a href="./konkurs-inside.html">radio/konkurs-inside.html</a></li>
+        <li><a href="./konkursi-priz.html">radio/konkursi-priz.html</a></li>
+        <li><a href="./listen.html">radio/listen.html</a></li>
+        <li><a href="./listen-inside.html">radio/listen-inside.html</a></li>
+        <li><a href="./max-news.html">radio/max-news.html</a></li>
+        <li><a href="./news.html">radio/news.html</a></li>
+        <li><a href="./news-inside.html">radio/news-inside.html</a></li>
+        <li><a href="./photo-gallery.html">radio/photo-gallery.html</a></li>
+        <li><a href="./serial-news.html">radio/serial-news.html</a></li>
+        <li><a href="./show.html">radio/show.html</a></li>
+        <li><a href="./sms.html">radio/sms.html</a></li>
+        <li><a href="./society.html">radio/society.html</a></li>
+        <li><a href="./spisok-program.html">radio/spisok-program.html</a></li>
+        <li><a href="./tv.html">radio/tv.html</a></li>
+        <li><a href="./tvdetail.html">radio/tvdetail.html</a></li>
+      </div>
+      <nav class="navbar ">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-2">
+              <div class="logo">
+                <a href="index.html">
+                  <img src="images/logo.png">
+                </a>
+              </div>
+            </div>
+            <div class="col-xs-7">
+              <div class="player" id="music_player">
+                <div class="inner clearfix">
+                  <div class="logo-artist">
+                    <audio id="music" preload="true">
+                      <source src="http://www.alexkatz.me/codepen/music/interlude.mp3">
+                      <source src="http://www.alexkatz.me/codepen/music/interlude.ogg">
+                    </audio>
+                    <div id="audioplayer">
+                      <button id="pButton" class="play" onclick="play()"></button>
+                      <div id="timeline">
+                        <div id="playhead"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="now-playing">
+                    <p class="now-playing-label">Сейчас играет</p>
+                    <span class="name-artist">Linkin Park - Bleed it out</span>
+                    <div class="volume">
+                      <a class="trigger-volume" href="#/"></a>
+                      <div class="line-track"></div>
+                      <span class="percent-volume">80%</span>
+                    </div>
+                  </div>
+                  <div class="choose-station">
+                    <a class="choose-st-btn" href="http://maximum.stage.quantumart.ru/online/">Выбрать станцию</a>
+                  </div>
+                </div>
+                <div class="inner outer clearfix">
+                  <div class="box-play">
+                    <a class="play" href="#/">
+                      <img src="images/layer-103.jpg" alt="" />
+                    </a>
+                  </div>
+                  <div class="box-play">
+                    <a class="play" href="#/">
+                      <img src="images/layer-104.jpg" alt="" />
+                    </a>
+                  </div>
+                  <div class="box-play">
+                    <a class="play" href="#/">
+                      <img src="images/layer-105.jpg" alt="" />
+                    </a>
+                  </div>
+                  <div class="box-play">
+                    <a class="play" href="#/">
+                      <img src="images/layer-106.jpg" alt="" />
+                    </a>
+                  </div>
+                  <div class="box-play">
+                    <a class="play" href="#/">
+                      <img src="images/layer-107.jpg" alt="" />
+                    </a>
+                  </div>
+                  <div class="box-play">
+                    <a class="play" href="#/">
+                      <img src="images/layer-107.jpg" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-3">
+              <div class="share-box">
+                <div class="row-social">
+                  <a class="vk-share" href="#/"></a>
+                  <a class="fb-share" href="#/"></a>
+                  <a class="tw-share" href="#/"></a>
+                  <a class="youtube-share" href="#/"></a>
+                  <a class="inst-share" href="#/"></a>
+                  <a class="get-app-andr" href="#/"></a>
+                  <a class="get-app-ios" href="#/"></a>
+                  <a class="get-app-windows" href="#/"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div id="menu-wrapper">
+      <div class="container wrapper">
+        <div class="menu-box">
+          <ul class="nav">
+            <li>
+              <a href="#">О радио</a>
+              <div>
+                <ul>
+                  <li class="list-news">
+                    <ul>
+                      <li>
+                        <a href="#">Новости радиостанции</a>
+                      </li>
+                      <li>
+                        <a href="#">Музыкальные новости</a>
+                      </li>
+                      <li>
+                        <a href="#">Афиша</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <ul>
+                    <div class="sub-title">
+                      <h3>
+                            <a href="#">Последние новости</a>
+                            </h3>
+                    </div>
+                    <li class="last-news">
+                      <div class="news-cont">
+                        <div class="picture">
+                          <a href="#/">
+                            <img src="http://dummyimage.com/226x180/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image"></a>
+                        </div>
+                        <h2 class="name-news">
+                              <a href="#/">
+                                <a href="#/">LINDEMANN в гостях High Society Шоу!</a>
+                              </a>
+                              </h2>
+                        <div class="date-news">27.12.15</div>
+                      </div>
+                    </li>
+                    <li class="last-news">
+                      <div class="news-cont">
+                        <div class="picture">
+                          <a href="#/">
+                            <img src="http://dummyimage.com/226x180/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image"></a>
+                        </div>
+                        <h2 class="name-news">
+                              <a href="#/">LINDEMANN в гостях High Society Шоу!</a>
+                              </h2>
+                        <div class="date-news">27.12.15</div>
+                      </div>
+                    </li>
+                    <li class="last-news">
+                      <div class="news-cont">
+                        <div class="picture">
+                          <a href="#"><img src="http://dummyimage.com/226x180/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image"></a>
+                        </div>
+                        <h2 class="name-news">
+                                <a href="#/">LINDEMANN в гостях High Society Шоу!</a>
+                                </h2>
+                        <div class="date-news">27.12.15</div>
+                      </div>
+                    </li>
+                  </ul>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">Новости</a>
+            </li>
+            <li>
+              <a href="#">Музыка</a>
+              <div>
+                <ul>
+                  <li class="list-news">
+                    <ul>
+                      <li>
+                        <a href="#">Новости радиостанции</a>
+                      </li>
+                      <li>
+                        <a href="#">Музыкальные новости</a>
+                      </li>
+                      <li>
+                        <a href="#">Афиша</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <ul>
+                    <div class="sub-title">
+                      <h3>
+                              <a href="#">Последние новости</a>
+                              </h3>
+                    </div>
+                    <li class="last-news">
+                      <div class="news-cont">
+                        <div class="picture">
+                          <a href="#/">
+                            <img src="http://dummyimage.com/226x180/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image"></a>
+                        </div>
+                        <h2 class="name-news">
+                                <a href="#/">
+                                  <a href="#/">LINDEMANN в гостях High Society Шоу!</a>
+                                </a>
+                                </h2>
+                        <div class="date-news">27.12.15</div>
+                      </div>
+                    </li>
+                    <li class="last-news">
+                      <div class="news-cont">
+                        <div class="picture">
+                          <a href="#/">
+                            <img src="http://dummyimage.com/226x180/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image"></a>
+                        </div>
+                        <h2 class="name-news">
+                                <a href="#/">LINDEMANN в гостях High Society Шоу!</a>
+                                </h2>
+                        <div class="date-news">27.12.15</div>
+                      </div>
+                    </li>
+                    <li class="last-news">
+                      <div class="news-cont">
+                        <div class="picture">
+                          <a href="#"><img src="http://dummyimage.com/226x180/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image"></a>
+                        </div>
+                        <h2 class="name-news">
+                                  <a href="#/">LINDEMANN в гостях High Society Шоу!</a>
+                                  </h2>
+                        <div class="date-news">27.12.15</div>
+                      </div>
+                    </li>
+                  </ul>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">Акции</a>
+              <div>
+                <ul>
+                  <li class="list-news">
+                    <ul>
+                      <li>
+                        <a href="#">Новости радиостанции</a>
+                      </li>
+                      <li>
+                        <a href="#">Музыкальные новости</a>
+                      </li>
+                      <li>
+                        <a href="#">Афиша</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <ul>
+                    <div class="sub-title">
+                      <h3>
+                                <a href="#">Последние новости</a>
+                                </h3>
+                    </div>
+                    <li class="last-news">
+                      <div class="news-cont">
+                        <div class="picture">
+                          <a href="#/">
+                            <img src="http://dummyimage.com/226x180/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image"></a>
+                        </div>
+                        <h2 class="name-news">
+                                  <a href="#/">
+                                    <a href="#/">LINDEMANN в гостях High Society Шоу!</a>
+                                  </a>
+                                  </h2>
+                        <div class="date-news">27.12.15</div>
+                      </div>
+                    </li>
+                    <li class="last-news">
+                      <div class="news-cont">
+                        <div class="picture">
+                          <a href="#/">
+                            <img src="http://dummyimage.com/226x180/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image"></a>
+                        </div>
+                        <h2 class="name-news">
+                                  <a href="#/">LINDEMANN в гостях High Society Шоу!</a>
+                                  </h2>
+                        <div class="date-news">27.12.15</div>
+                      </div>
+                    </li>
+                    <li class="last-news">
+                      <div class="news-cont">
+                        <div class="picture">
+                          <a href="#"><img src="http://dummyimage.com/226x180/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image"></a>
+                        </div>
+                        <h2 class="name-news">
+                                    <a href="#/">LINDEMANN в гостях High Society Шоу!</a>
+                                    </h2>
+                        <div class="date-news">27.12.15</div>
+                      </div>
+                    </li>
+                  </ul>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">Призы</a>
+              <div>
+                <ul>
+                  <li class="list-news">
+                    <ul>
+                      <li>
+                        <a href="#">Новости радиостанции</a>
+                      </li>
+                      <li>
+                        <a href="#">Музыкальные новости</a>
+                      </li>
+                      <li>
+                        <a href="#">Афиша</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <ul>
+                    <div class="sub-title">
+                      <h3>
+                                  <a href="#">Последние новости</a>
+                                  </h3>
+                    </div>
+                    <li class="last-news">
+                      <div class="news-cont">
+                        <div class="picture">
+                          <a href="#/">
+                            <img src="http://dummyimage.com/226x180/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image"></a>
+                        </div>
+                        <h2 class="name-news">
+                                    <a href="#/">
+                                      <a href="#/">LINDEMANN в гостях High Society Шоу!</a>
+                                    </a>
+                                    </h2>
+                        <div class="date-news">27.12.15</div>
+                      </div>
+                    </li>
+                    <li class="last-news">
+                      <div class="news-cont">
+                        <div class="picture">
+                          <a href="#/">
+                            <img src="http://dummyimage.com/226x180/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image"></a>
+                        </div>
+                        <h2 class="name-news">
+                                    <a href="#/">LINDEMANN в гостях High Society Шоу!</a>
+                                    </h2>
+                        <div class="date-news">27.12.15</div>
+                      </div>
+                    </li>
+                    <li class="last-news">
+                      <div class="news-cont">
+                        <div class="picture">
+                          <a href="#"><img src="http://dummyimage.com/226x180/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image"></a>
+                        </div>
+                        <h2 class="name-news">
+                                      <a href="#/">LINDEMANN в гостях High Society Шоу!</a>
+                                      </h2>
+                        <div class="date-news">27.12.15</div>
+                      </div>
+                    </li>
+                  </ul>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">Слушать радио</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--[if lt IE 8]>
+                  <p class="browserupgrade">
+                    You are using an <strong></strong>
+                    browser. Please
+                    <a href="http://browsehappy.com/">upgrade your browser</a>
+                    to improve your experience.
+                  </p>
+                  <![endif]-->
+    <div id="content">
+      <div class="container">
+        <div class="row inside_page konkurs-priz-page photogallery clearfix">
+          <div class="col-xs-12">
+            <h2 class="title-new">Фотогаллерея</h2>
+
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="left_c">
+                  <!-- Tab panes -->
+                  <div role="tabpanel" id="tabs-default">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                      <li role="presentation" class="active">
+                        <a href="#home" aria-controls="photo" role="tab" data-toggle="tab">Фотоотчеты</a>
+                      </li>
+                      <li role="presentation">
+                        <a href="#tab" aria-controls="tab" role="tab" data-toggle="tab">Альбомы</a>
+                      </li>
+                      <li role="presentation">
+                        <a href="#fotootchet" aria-controls="tab" role="tab" data-toggle="tab">Фотоотчеты</a>
+                      </li>
+                      <li role="presentation">
+                        <a href="#guests" aria-controls="tab" role="tab" data-toggle="tab">Гости</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-content show-view">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                     <div class="grid-iso" id="grid-iso">
+                       <div class="hover10 grid-item">
+                         <a href="#"><img src="images/gallery/layer-98.jpg" height="138" width="228" alt=""></a>
+                       </div>
+                       <div class="grid-item hover10 grid-item--height2">
+                         <a href="#"><img src="images/gallery/layer-93.jpg" alt=""></a>
+                       </div>
+                       <div class="grid-item hover10">
+                         <a href="#"><img src="images/gallery/layer-94.jpg" alt=""></a>
+                       </div>
+                       <div class="grid-item  hover10 grid-item--height2">
+                         <a href="#"><img src="images/gallery/layer-93.jpg" alt=""></a>
+                       </div>
+                       <div class="hover10 grid-item">
+                         <a href="#"><img src="images/gallery/layer-94.jpg" alt=""></a>
+                       </div>
+                       <div class="hover10 grid-item">
+                         <a href="#"><img src="images/gallery/layer-95.jpg" alt=""></a>
+                       </div>
+                       <div class="grid-item  hover10 grid-item--height2">
+                         <a href="#"><img src="images/gallery/layer-93.jpg" alt=""></a>
+                       </div>
+                       <div class="hover10 grid-item">
+                         <a href="#"><img src="images/gallery/layer-96.jpg" alt=""></a>
+                       </div>
+                       <div class="grid-item  hover10 grid-item--height2">
+                         <a href="#"><img src="images/gallery/layer-93.jpg" alt=""></a>
+                       </div>
+                     </div>
+                      <a class="button" id="buy_ticket" href="#/">Больше фото</a>
+                      <!-- isotope-wrapper -->
+                    </div>
+                    <!--photo-->
+                    <div role="tabpanel" class="tab-pane" id="tab">
+                        <div class="grid-iso" id="grid-iso">
+                          <div class="grid-item  hover10">
+                            <a href="#"><img src="images/gallery/layer-94.jpg" height="138" width="228" alt=""></a>
+                          </div>
+                          <div class="grid-item  hover10 grid-item--height2 hover10">
+                            <a href="#"><img src="images/gallery/layer-93.jpg" alt=""></a>
+                          </div>
+                          <div class="grid-item hover10">
+                            <a href="#"><img src="images/gallery/layer-94.jpg" alt=""></a>
+                          </div>
+                          <div class="grid-item  hover10 ">
+                            <a href="#"><img src="images/gallery/layer-98.jpg" alt=""></a>
+                          </div>
+                          <div class="grid-item  hover10 grid-item--height2">
+                            <a href="#"><img src="images/gallery/layer-93.jpg" alt=""></a>
+                          </div>
+                          <div class="hover10 grid-item">
+                            <a href="#"><img src="images/gallery/layer-95.jpg" alt=""></a>
+                          </div>
+                          <div class="grid-item  hover10 grid-item--height2">
+                            <a href="#"><img src="images/gallery/layer-93.jpg" alt=""></a>
+                          </div>
+                          <div class="grid-item hover10">
+                            <a href="#"><img src="images/gallery/layer-96.jpg" alt=""></a>
+                          </div>
+                          <div class="grid-item  hover10 grid-item--height2">
+                            <a href="#"><img src="images/gallery/layer-93.jpg" alt=""></a>
+                          </div>
+                        </div>
+                      <a class="button" id="buy_ticket" href="#/">Больше фото</a>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="fotootchet">
+                      <div class="grid-iso" id="grid-iso">
+                        <div class="hover10 grid-item">
+                          <a href="#"><img src="images/gallery/layer-98.jpg" height="138" width="228" alt=""></a>
+                        </div>
+                        <div class="grid-item  hover10 grid-item--height2">
+                          <a href="#"><img src="images/gallery/layer-93.jpg" alt=""></a>
+                        </div>
+                        <div class="hover10 grid-item">
+                          <a href="#"><img src="images/gallery/layer-94.jpg" alt=""></a>
+                        </div>
+                        <div class="grid-item  hover10 grid-item--height2">
+                          <a href="#"><img src="images/gallery/layer-93.jpg" alt=""></a>
+                        </div>
+                        <div class="hover10 grid-item">
+                          <a href="#"><img src="images/gallery/layer-94.jpg" alt=""></a>
+                        </div>
+                        <div class="hover10 grid-item">
+                          <a href="#"><img src="images/gallery/layer-95.jpg" alt=""></a>
+                        </div>
+                        <div class="grid-item  hover10 grid-item--height2">
+                          <a href="#"><img src="images/gallery/layer-93.jpg" alt=""></a>
+                        </div>
+                        <div class="hover10 grid-item">
+                          <a href="#"><img src="images/gallery/layer-96.jpg" alt=""></a>
+                        </div>
+                        <div class="grid-item  hover10 grid-item--height2">
+                          <a href="#"><img src="images/gallery/layer-93.jpg" alt=""></a>
+                        </div>
+                      </div>
+                      <a class="button" id="buy_ticket" href="#/">Больше фото</a>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="guests">
+                      <div class="grid-iso" id="grid-iso">
+                        <div class="hover10 grid-item">
+                          <a href="#"><img src="images/gallery/layer-98.jpg" height="138" width="228" alt=""></a>
+                        </div>
+                        <div class="grid-item  hover10 grid-item--height2">
+                          <a href="#"><img src="images/gallery/layer-93.jpg" alt=""></a>
+                        </div>
+                        <div class="hover10 grid-item">
+                          <a href="#"><img src="images/gallery/layer-94.jpg" alt=""></a>
+                        </div>
+                        <div class="grid-item  hover10 grid-item--height2">
+                          <a href="#"><img src="images/gallery/layer-93.jpg" alt=""></a>
+                        </div>
+                        <div class="hover10 grid-item">
+                          <a href="#"><img src="images/gallery/layer-94.jpg" alt=""></a>
+                        </div>
+                        <div class="hover10 grid-item">
+                          <a href="#"><img src="images/gallery/layer-95.jpg" alt=""></a>
+                        </div>
+                        <div class="grid-item  hover10 grid-item--height2">
+                          <a href="#"><img src="images/gallery/layer-93.jpg" alt=""></a>
+                        </div>
+                        <div class="hover10 grid-item">
+                          <a href="#"><img src="images/gallery/layer-96.jpg" alt=""></a>
+                        </div>
+                        <div class="grid-item  hover10 grid-item--height2">
+                          <a href="#"><img src="images/gallery/layer-93.jpg" alt=""></a>
+                        </div>
+                      </div>
+                      <a class="button" id="buy_ticket" href="#/">Больше фото</a>
+                    </div>
+                  </div>
+                  <!-- tab-content show-view-->
+                </div>
+                <!-- .left-c -->
+                <div class="right_c">
+                  <div class="top-block-baner">
+                    <img src="images/right-baner.jpg"></div>
+                </div>
+                <!-- /.col-md-12 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- .container -->
+    <!-- .content -->
+    <footer class="footer" id="footer">
+      <div class="footer-nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <p class="top-label">ЕСЛИ РАДИО - ТО МАКСИМУМ!</p>
+              <p class="email">Email: <a href="mailto:radio@maximum.ru">radio@maximum.ru</a></p>
+              <p class="copyright">Copyright © 2000-2015 Радио MAXIMUM</p>
+              <a class="reklama-btn" href="">Реклама на радио Maximum</a>
+            </div>
+            <div class="col-md-2">
+              <ul class="foot-menu">
+                <li><a href="#/">Новости</a></li>
+                <li><a href="#/">Музыка</a></li>
+                <li><a href="#/">Программы</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <ul class="foot-menu">
+                <li><a href="#/">Викторины и конкурсы</a></li>
+                <li><a href="#/">О радио</a></li>
+                <li><a href="#/">Слушать радио</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <div class="share-box">
+                <div class="row-social">
+                  <a class="vk-share" href="#/"></a>
+                  <a class="fb-share" href="#/"></a>
+                  <a class="tw-share" href="#/"></a>
+                  <a class="youtube-share" href="#/"></a>
+                  <a class="inst-share" href="#/"></a>
+                  <a class="get-app-andr" href="#/"></a>
+                  <a class="get-app-ios" href="#/"></a>
+                  <a class="get-app-windows" href="#/"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- .footer-nav -->
+      <div class="footer-backlink">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <a href="newton-fact.ru" class="back_link"><img src="images/backlink.png" alt="" /></a>
+            </div>
+            <div class="col-md-8 partners">
+              <a href="#/">
+                <div class="vcenter">
+                  <img src="images/partner_radio_1.png" alt="" />
+                </div>
+              </a>
+              <a href="#/">
+                <div class="vcenter">
+                  <img src="images/partner_radio_2.png" alt="" />
+                </div>
+              </a>
+              <a href="#/">
+                <div class="vcenter">
+                  <img src="images/partner_radio_3.png" alt="" />
+                </div>
+              </a>
+              <a href="#/">
+                <div class="vcenter">
+                  <img src="images/partner_radio_4.png" alt="" />
+                </div>
+              </a>
+              <a href="#/">
+                <div class="vcenter">
+                  <img src="images/partner_radio_5.png" alt="" />
+                </div>
+              </a>
+              <a href="#/">
+                <div class="vcenter">
+                  <img src="images/partner_radio_6.png" alt="" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- .footer-backlink -->
+      <!-- <script src="https://cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>-->
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/slick.min.js"></script>
+      <!--  <script type="text/javascript" src="js/masonry.min.js"></script>-->
+      <!-- // <script type="text/javascript" src="http://isotope.metafizzy.co/isotope.pkgd.min.js"></script> -->
+      <script src="js/bootstrap-filestyle.min.js"></script>
+      <script src="js/bootstrap-modalmanager.js"></script>
+      <script src="js/bootstrap-modal.js"></script>
+      <script src="js/slick.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
+      <!--    <script src="js/jquery-accessibleMegaMenu.js"></script>-->
+      <!-- <script src="js/isotope.pkgd.min.js"></script> -->
+      <script type="text/javascript" src="js/isotope.pkgd.js"></script>
+      <script src="js/jquery.mask.min.js"></script>
+      <script>
+      window.jQuery || document.write("<script src='js/vendor/jquery-1.11.2.min.js'><\/script>")
+      </script>
+      <script src="js/js.js"></script>
+    </footer>
+  </body>
+
+</html>

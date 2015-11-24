@@ -1,0 +1,1339 @@
+/*!
+ * Hover.css (http://ianlunn.github.io/Hover/)
+ * Version: 2.0.2
+ * Author: Ian Lunn @IanLunn
+ * Author URL: http://ianlunn.co.uk/
+ * Github: https://github.com/IanLunn/Hover
+
+ * Made available under a MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+
+ * Hover.css Copyright Ian Lunn 2014. Generated with Sass.
+ */
+/* Pulse */
+@-webkit-keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+@keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+/* line 20, ../scss/hover/hover.scss */
+.hvr-pulse {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 15, ../scss/hover/effects/2d-transitions/_pulse.scss */
+.hvr-pulse:hover, .hvr-pulse:focus, .hvr-pulse:active {
+  -webkit-animation-name: hvr-pulse;
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+/* Bounce To Bottom */
+/* line 28, ../scss/hover/hover.scss */
+.hvr-bounce-to-bottom {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+/* line 8, ../scss/hover/effects/background-transitions/_bounce-to-bottom.scss */
+.hvr-bounce-to-bottom:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+/* line 24, ../scss/hover/effects/background-transitions/_bounce-to-bottom.scss */
+.hvr-bounce-to-bottom:hover, .hvr-bounce-to-bottom:focus, .hvr-bounce-to-bottom:active {
+  color: white;
+}
+/* line 29, ../scss/hover/effects/background-transitions/_bounce-to-bottom.scss */
+.hvr-bounce-to-bottom:hover:before, .hvr-bounce-to-bottom:focus:before, .hvr-bounce-to-bottom:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+/* Shutter Out Horizontal */
+/* line 35, ../scss/hover/hover.scss */
+.hvr-shutter-out-horizontal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  background: #e1e1e1;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+/* line 9, ../scss/hover/effects/background-transitions/_shutter-out-horizontal.scss */
+.hvr-shutter-out-horizontal:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #2098D1;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+/* line 25, ../scss/hover/effects/background-transitions/_shutter-out-horizontal.scss */
+.hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active {
+  color: white;
+}
+/* line 30, ../scss/hover/effects/background-transitions/_shutter-out-horizontal.scss */
+.hvr-shutter-out-horizontal:hover:before, .hvr-shutter-out-horizontal:focus:before, .hvr-shutter-out-horizontal:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/* Bob */
+@-webkit-keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@-webkit-keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+/* line 42, ../scss/hover/hover.scss */
+.hvr-bob {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 23, ../scss/hover/effects/2d-transitions/_bob.scss */
+.hvr-bob:hover, .hvr-bob:focus, .hvr-bob:active {
+  -webkit-animation-name: hvr-bob-float, hvr-bob;
+  animation-name: hvr-bob-float, hvr-bob;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+}
+
+/* Buzz Out */
+@-webkit-keyframes hvr-buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+@keyframes hvr-buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+/* line 50, ../scss/hover/hover.scss */
+.hvr-buzz-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 47, ../scss/hover/effects/2d-transitions/_buzz-out.scss */
+.hvr-buzz-out:hover, .hvr-buzz-out:focus, .hvr-buzz-out:active {
+  -webkit-animation-name: hvr-buzz-out;
+  animation-name: hvr-buzz-out;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/* Fade */
+/* line 56, ../scss/hover/hover.scss */
+.hvr-fade {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+}
+/* line 8, ../scss/hover/effects/background-transitions/_fade.scss */
+.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
+  background-color: #2098D1;
+  color: white;
+}
+
+/* Shutter In Horizontal */
+/* line 63, ../scss/hover/hover.scss */
+.hvr-shutter-in-horizontal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  background: #2098D1;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+/* line 9, ../scss/hover/effects/background-transitions/_shutter-in-horizontal.scss */
+.hvr-shutter-in-horizontal:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #e1e1e1;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+/* line 25, ../scss/hover/effects/background-transitions/_shutter-in-horizontal.scss */
+.hvr-shutter-in-horizontal:hover, .hvr-shutter-in-horizontal:focus, .hvr-shutter-in-horizontal:active {
+  color: white;
+}
+/* line 30, ../scss/hover/effects/background-transitions/_shutter-in-horizontal.scss */
+.hvr-shutter-in-horizontal:hover:before, .hvr-shutter-in-horizontal:focus:before, .hvr-shutter-in-horizontal:active:before {
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+}
+
+/* Outline Out */
+/* line 70, ../scss/hover/hover.scss */
+.hvr-outline-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+/* line 9, ../scss/hover/effects/border-transitions/_outline-out.scss */
+.hvr-outline-out:before {
+  content: '';
+  position: absolute;
+  border: #e1e1e1 solid 4px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: top, right, bottom, left;
+  transition-property: top, right, bottom, left;
+}
+/* line 21, ../scss/hover/effects/border-transitions/_outline-out.scss */
+.hvr-outline-out:hover:before, .hvr-outline-out:focus:before, .hvr-outline-out:active:before {
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+}
+
+/* Curl Top Left */
+/* line 77, ../scss/hover/hover.scss */
+.hvr-curl-top-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+/* line 6, ../scss/hover/effects/curls/_curl-top-left.scss */
+.hvr-curl-top-left:before {
+  pointer-events: none;
+  position: absolute;
+  content: '';
+  height: 0;
+  width: 0;
+  top: 0;
+  left: 0;
+  background: white;
+  /* IE9 */
+  background: linear-gradient(135deg, white 45%, #aaa 50%, #ccc 56%, white 80%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#000000');
+  /*For IE7-8-9*/
+  z-index: 1000;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: width, height;
+  transition-property: width, height;
+}
+/* line 30, ../scss/hover/effects/curls/_curl-top-left.scss */
+.hvr-curl-top-left:hover:before, .hvr-curl-top-left:focus:before, .hvr-curl-top-left:active:before {
+  width: 25px;
+  height: 25px;
+}
+
+/* Icon Buzz */
+@-webkit-keyframes hvr-icon-buzz {
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+}
+@keyframes hvr-icon-buzz {
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+}
+/* line 85, ../scss/hover/hover.scss */
+.hvr-icon-buzz {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  padding-right: 2.2em;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+/* line 18, ../scss/hover/effects/icons/_icon-buzz.scss */
+.hvr-icon-buzz:before {
+  content: "\f017";
+  position: absolute;
+  right: 1em;
+  padding: 0 1px;
+  font-family: FontAwesome;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+/* line 31, ../scss/hover/effects/icons/_icon-buzz.scss */
+.hvr-icon-buzz:hover:before, .hvr-icon-buzz:focus:before, .hvr-icon-buzz:active:before {
+  -webkit-animation-name: hvr-icon-buzz;
+  animation-name: hvr-icon-buzz;
+  -webkit-animation-duration: 0.15s;
+  animation-duration: 0.15s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+/* Icon Drop */
+@-webkit-keyframes hvr-icon-drop {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  51%,
+	100% {
+    opacity: 1;
+  }
+}
+@keyframes hvr-icon-drop {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  51%,
+	100% {
+    opacity: 1;
+  }
+}
+/* Icon Drop */
+/* line 92, ../scss/hover/hover.scss */
+.hvr-icon-drop {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  padding-right: 2.2em;
+}
+/* line 25, ../scss/hover/effects/icons/_icon-drop.scss */
+.hvr-icon-drop:before {
+  content: "\f041";
+  position: absolute;
+  right: 1em;
+  opacity: 1;
+  padding: 0 1px;
+  font-family: FontAwesome;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+/* line 39, ../scss/hover/effects/icons/_icon-drop.scss */
+.hvr-icon-drop:hover:before, .hvr-icon-drop:focus:before, .hvr-icon-drop:active:before {
+  opacity: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-animation-name: hvr-icon-drop;
+  animation-name: hvr-icon-drop;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  animation-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+/* Grow */
+/* line 99, ../scss/hover/hover.scss */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+/* line 7, ../scss/hover/effects/2d-transitions/_grow.scss */
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/*/(())*/
+/* 2D TRANSITIONS */
+/*
+
+@import "effects/2d-transitions/_shrink";
+@if $includeClasses {
+  .hvr-shrink {
+    @include shrink();
+  }
+}
+
+
+
+@import "effects/2d-transitions/_pulse-grow";
+@if $includeClasses {
+  .hvr-pulse-grow {
+    @include pulse-grow();
+  }
+}
+
+@import "effects/2d-transitions/_pulse-shrink";
+@if $includeClasses {
+  .hvr-pulse-shrink {
+    @include pulse-shrink();
+  }
+}
+
+@import "effects/2d-transitions/_push";
+@if $includeClasses {
+  .hvr-push {
+    @include push();
+  }
+}
+
+@import "effects/2d-transitions/_pop";
+@if $includeClasses {
+  .hvr-pop {
+    @include pop();
+  }
+}
+
+@import "effects/2d-transitions/_bounce-in";
+@if $includeClasses {
+  .hvr-bounce-in {
+    @include bounce-in();
+  }
+}
+
+@import "effects/2d-transitions/_bounce-out";
+@if $includeClasses {
+  .hvr-bounce-out {
+    @include bounce-out();
+  }
+}
+
+@import "effects/2d-transitions/_rotate";
+@if $includeClasses {
+  .hvr-rotate {
+    @include rotate();
+  }
+}
+
+@import "effects/2d-transitions/_grow-rotate";
+@if $includeClasses {
+  .hvr-grow-rotate {
+    @include grow-rotate();
+  }
+}
+
+@import "effects/2d-transitions/_float";
+@if $includeClasses {
+  .hvr-float {
+    @include float();
+  }
+}
+
+@import "effects/2d-transitions/_sink";
+@if $includeClasses {
+  .hvr-sink {
+    @include sink();
+  }
+}
+
+
+
+@import "effects/2d-transitions/_hang";
+@if $includeClasses {
+  .hvr-hang {
+    @include hang();
+  }
+}
+
+@import "effects/2d-transitions/_skew";
+@if $includeClasses {
+  .hvr-skew {
+    @include skew();
+  }
+}
+
+@import "effects/2d-transitions/_skew-forward";
+@if $includeClasses {
+  .hvr-skew-forward {
+    @include skew-forward();
+  }
+}
+
+@import "effects/2d-transitions/_skew-backward";
+@if $includeClasses {
+  .hvr-skew-backward {
+      @include skew-backward();
+  }
+}
+
+@import "effects/2d-transitions/_wobble-vertical";
+@if $includeClasses {
+  .hvr-wobble-vertical {
+    @include wobble-vertical();
+  }
+}
+
+@import "effects/2d-transitions/_wobble-horizontal";
+@if $includeClasses {
+  .hvr-wobble-horizontal {
+    @include wobble-horizontal();
+  }
+}
+
+@import "effects/2d-transitions/_wobble-to-bottom-right";
+@if $includeClasses {
+  .hvr-wobble-to-bottom-right {
+      @include wobble-to-bottom-right();
+  }
+}
+
+@import "effects/2d-transitions/_wobble-to-top-right";
+@if $includeClasses {
+  .hvr-wobble-to-top-right {
+      @include wobble-to-top-right();
+  }
+}
+
+@import "effects/2d-transitions/_wobble-top";
+@if $includeClasses {
+  .hvr-wobble-top {
+    @include wobble-top();
+  }
+}
+
+@import "effects/2d-transitions/_wobble-bottom";
+@if $includeClasses {
+  .hvr-wobble-bottom {
+    @include wobble-bottom();
+  }
+}
+
+@import "effects/2d-transitions/_wobble-skew";
+@if $includeClasses {
+  .hvr-wobble-skew {
+      @include wobble-skew();
+  }
+}
+
+@import "effects/2d-transitions/_buzz";
+@if $includeClasses {
+  .hvr-buzz {
+      @include buzz();
+  }
+}
+
+
+
+BACKGROUND TRANSITIONS
+
+
+@import "effects/background-transitions/_back-pulse";
+@if $includeClasses {
+  .hvr-back-pulse {
+    @include back-pulse();
+  }
+}
+
+@import "effects/background-transitions/_sweep-to-right";
+@if $includeClasses {
+  .hvr-sweep-to-right {
+    @include sweep-to-right();
+  }
+}
+
+@import "effects/background-transitions/_sweep-to-left";
+@if $includeClasses {
+  .hvr-sweep-to-left {
+    @include sweep-to-left();
+  }
+}
+
+@import "effects/background-transitions/_sweep-to-bottom";
+@if $includeClasses {
+  .hvr-sweep-to-bottom {
+    @include sweep-to-bottom();
+  }
+}
+
+@import "effects/background-transitions/_sweep-to-top";
+@if $includeClasses {
+  .hvr-sweep-to-top {
+    @include sweep-to-top();
+  }
+}
+
+@import "effects/background-transitions/_bounce-to-right";
+@if $includeClasses {
+  .hvr-bounce-to-right {
+    @include bounce-to-right();
+  }
+}
+
+@import "effects/background-transitions/_bounce-to-left";
+@if $includeClasses {
+  .hvr-bounce-to-left {
+    @include bounce-to-left();
+  }
+}
+
+
+
+@import "effects/background-transitions/_bounce-to-top";
+@if $includeClasses {
+  .hvr-bounce-to-top {
+    @include bounce-to-top();
+  }
+}
+
+@import "effects/background-transitions/_radial-out";
+@if $includeClasses {
+  .hvr-radial-out {
+    @include radial-out();
+  }
+}
+
+@import "effects/background-transitions/_radial-in";
+@if $includeClasses {
+  .hvr-radial-in {
+    @include radial-in();
+  }
+}
+
+@import "effects/background-transitions/_rectangle-in";
+@if $includeClasses {
+  .hvr-rectangle-in {
+    @include rectangle-in();
+  }
+}
+
+@import "effects/background-transitions/_rectangle-out";
+@if $includeClasses {
+  .hvr-rectangle-out {
+    @include rectangle-out();
+  }
+}
+
+
+
+
+
+@import "effects/background-transitions/_shutter-in-vertical";
+@if $includeClasses {
+  .hvr-shutter-in-vertical {
+    @include shutter-in-vertical();
+  }
+}
+
+@import "effects/background-transitions/_shutter-out-vertical";
+@if $includeClasses {
+  .hvr-shutter-out-vertical {
+    @include shutter-out-vertical();
+  }
+}
+
+
+BORDER TRANSITIONS
+@import "effects/border-transitions/_border-fade";
+@if $includeClasses {
+  .hvr-border-fade {
+    @include border-fade();
+  }
+}
+
+@import "effects/border-transitions/_hollow";
+@if $includeClasses {
+  .hvr-hollow {
+    @include hollow();
+  }
+}
+
+@import "effects/border-transitions/_trim";
+@if $includeClasses {
+  .hvr-trim {
+    @include trim();
+  }
+}
+
+@import "effects/border-transitions/_ripple-out";
+@if $includeClasses {
+  .hvr-ripple-out {
+    @include ripple-out();
+  }
+}
+
+@import "effects/border-transitions/_ripple-in";
+@if $includeClasses {
+  .hvr-ripple-in {
+    @include ripple-in();
+  }
+}
+
+
+
+@import "effects/border-transitions/_outline-in";
+@if $includeClasses {
+  .hvr-outline-in {
+    @include outline-in();
+  }
+}
+
+@import "effects/border-transitions/_round-corners";
+@if $includeClasses {
+  .hvr-round-corners {
+    @include round-corners();
+  }
+}
+
+@import "effects/border-transitions/_underline-from-left";
+@if $includeClasses {
+  .hvr-underline-from-left {
+    @include underline-from-left();
+  }
+}
+
+@import "effects/border-transitions/_underline-from-center";
+@if $includeClasses {
+  .hvr-underline-from-center {
+    @include underline-from-center();
+  }
+}
+
+@import "effects/border-transitions/_underline-from-right";
+@if $includeClasses {
+  .hvr-underline-from-right {
+    @include underline-from-right();
+  }
+}
+
+@import "effects/border-transitions/_overline-from-left";
+@if $includeClasses {
+  .hvr-overline-from-left {
+    @include overline-from-left();
+  }
+}
+
+@import "effects/border-transitions/_overline-from-center";
+@if $includeClasses {
+  .hvr-overline-from-center {
+    @include overline-from-center();
+  }
+}
+
+@import "effects/border-transitions/_overline-from-right";
+@if $includeClasses {
+  .hvr-overline-from-right {
+    @include overline-from-right();
+  }
+}
+
+@import "effects/border-transitions/_reveal";
+@if $includeClasses {
+  .hvr-reveal {
+    @include reveal();
+  }
+}
+
+@import "effects/border-transitions/_underline-reveal";
+@if $includeClasses {
+  .hvr-underline-reveal {
+    @include underline-reveal();
+  }
+}
+
+@import "effects/border-transitions/_overline-reveal";
+@if $includeClasses {
+  .hvr-overline-reveal {
+    @include overline-reveal();
+  }
+}
+
+
+SHADOW/GLOW TRANSITIONS
+@import "effects/shadow-and-glow-transitions/_glow";
+@if $includeClasses {
+  .hvr-glow {
+    @include glow();
+  }
+}
+
+@import "effects/shadow-and-glow-transitions/_shadow";
+@if $includeClasses {
+  .hvr-shadow {
+    @include shadow();
+  }
+}
+
+@import "effects/shadow-and-glow-transitions/_grow-shadow";
+@if $includeClasses {
+  .hvr-grow-shadow {
+    @include grow-shadow();
+  }
+}
+
+@import "effects/shadow-and-glow-transitions/_box-shadow-outset";
+@if $includeClasses {
+  .hvr-box-shadow-outset {
+    @include box-shadow-outset();
+  }
+}
+
+@import "effects/shadow-and-glow-transitions/_box-shadow-inset";
+@if $includeClasses {
+  .hvr-box-shadow-inset {
+    @include box-shadow-inset();
+  }
+}
+
+@import "effects/shadow-and-glow-transitions/_float-shadow";
+@if $includeClasses {
+  .hvr-float-shadow {
+    @include float-shadow();
+  }
+}
+
+@import "effects/shadow-and-glow-transitions/_shadow-radial";
+@if $includeClasses {
+  .hvr-shadow-radial {
+    @include shadow-radial();
+  }
+}
+
+SPEECH BUBBLES
+@import "effects/speech-bubbles/_bubble-top";
+@if $includeClasses {
+  .hvr-bubble-top {
+    @include bubble-top();
+  }
+}
+
+@import "effects/speech-bubbles/_bubble-right";
+@if $includeClasses {
+  .hvr-bubble-right {
+    @include bubble-right();
+  }
+}
+
+@import "effects/speech-bubbles/_bubble-bottom";
+@if $includeClasses {
+  .hvr-bubble-bottom {
+    @include bubble-bottom();
+  }
+}
+
+@import "effects/speech-bubbles/_bubble-left";
+@if $includeClasses {
+  .hvr-bubble-left {
+    @include bubble-left();
+  }
+}
+
+@import "effects/speech-bubbles/_bubble-float-top";
+@if $includeClasses {
+  .hvr-bubble-float-top {
+    @include bubble-float-top();
+  }
+}
+
+@import "effects/speech-bubbles/_bubble-float-right";
+@if $includeClasses {
+  .hvr-bubble-float-right {
+    @include bubble-float-right();
+  }
+}
+
+@import "effects/speech-bubbles/_bubble-float-bottom";
+@if $includeClasses {
+  .hvr-bubble-float-bottom {
+    @include bubble-float-bottom();
+  }
+}
+
+@import "effects/speech-bubbles/_bubble-float-left";
+@if $includeClasses {
+  .hvr-bubble-float-left {
+    @include bubble-float-left();
+  }
+}
+
+ICONS
+@import "effects/icons/_icon-back";
+@if $includeClasses {
+  .hvr-icon-back {
+    @include icon-back();
+  }
+}
+
+@import "effects/icons/_icon-forward";
+@if $includeClasses {
+  .hvr-icon-forward {
+    @include icon-forward();
+  }
+}
+
+@import "effects/icons/_icon-down";
+@if $includeClasses {
+  .hvr-icon-down {
+    @include icon-down();
+  }
+}
+
+@import "effects/icons/_icon-up";
+@if $includeClasses {
+  .hvr-icon-up {
+    @include icon-up();
+  }
+}
+
+@import "effects/icons/_icon-spin";
+@if $includeClasses {
+  .hvr-icon-spin {
+    @include icon-spin();
+  }
+}
+
+
+
+@import "effects/icons/_icon-fade";
+@if $includeClasses {
+  .hvr-icon-fade {
+    @include icon-fade();
+  }
+}
+
+@import "effects/icons/_icon-float-away";
+@if $includeClasses {
+  .hvr-icon-float-away {
+    @include icon-float-away();
+  }
+}
+
+@import "effects/icons/_icon-sink-away";
+@if $includeClasses {
+  .hvr-icon-sink-away {
+    @include icon-sink-away();
+  }
+}
+
+@import "effects/icons/_icon-grow";
+@if $includeClasses {
+  .hvr-icon-grow {
+    @include icon-grow();
+  }
+}
+
+@import "effects/icons/_icon-shrink";
+@if $includeClasses {
+  .hvr-icon-shrink {
+    @include icon-shrink();
+  }
+}
+
+@import "effects/icons/_icon-pulse";
+@if $includeClasses {
+  .hvr-icon-pulse {
+    @include icon-pulse();
+  }
+}
+
+@import "effects/icons/_icon-pulse-grow";
+@if $includeClasses {
+  .hvr-icon-pulse-grow {
+    @include icon-pulse-grow();
+  }
+}
+
+@import "effects/icons/_icon-pulse-shrink";
+@if $includeClasses {
+  .hvr-icon-pulse-shrink {
+    @include icon-pulse-shrink();
+  }
+}
+
+@import "effects/icons/_icon-push";
+@if $includeClasses {
+  .hvr-icon-push {
+    @include icon-push();
+  }
+}
+
+@import "effects/icons/_icon-pop";
+@if $includeClasses {
+  .hvr-icon-pop {
+    @include icon-pop();
+  }
+}
+
+@import "effects/icons/_icon-bounce";
+@if $includeClasses {
+  .hvr-icon-bounce {
+    @include icon-bounce();
+  }
+}
+
+@import "effects/icons/_icon-rotate";
+@if $includeClasses {
+  .hvr-icon-rotate {
+    @include icon-rotate();
+  }
+}
+
+@import "effects/icons/_icon-grow-rotate";
+@if $includeClasses {
+  .hvr-icon-grow-rotate {
+    @include icon-grow-rotate();
+  }
+}
+
+@import "effects/icons/_icon-float";
+@if $includeClasses {
+  .hvr-icon-float {
+    @include icon-float();
+  }
+}
+
+@import "effects/icons/_icon-sink";
+@if $includeClasses {
+  .hvr-icon-sink {
+    @include icon-sink();
+  }
+}
+
+@import "effects/icons/_icon-bob";
+@if $includeClasses {
+  .hvr-icon-bob {
+    @include icon-bob();
+  }
+}
+
+@import "effects/icons/_icon-hang";
+@if $includeClasses {
+  .hvr-icon-hang {
+    @include icon-hang();
+  }
+}
+
+@import "effects/icons/_icon-wobble-horizontal";
+@if $includeClasses {
+  .hvr-icon-wobble-horizontal {
+    @include icon-wobble-horizontal();
+  }
+}
+
+@import "effects/icons/_icon-wobble-vertical";
+@if $includeClasses {
+  .hvr-icon-wobble-vertical {
+    @include icon-wobble-vertical();
+  }
+}
+
+
+
+@import "effects/icons/_icon-buzz-out";
+@if $includeClasses {
+  .hvr-icon-buzz-out {
+    @include icon-buzz-out();
+  }
+}
+
+CURLS
+
+
+@import "effects/curls/_curl-top-right";
+@if $includeClasses {
+  .hvr-curl-top-right {
+    @include curl-top-right();
+  }
+}
+
+@import "effects/curls/_curl-bottom-right";
+@if $includeClasses {
+  .hvr-curl-bottom-right {
+    @include curl-bottom-right();
+  }
+}
+
+@import "effects/curls/_curl-bottom-left";
+@if $includeClasses {
+  .hvr-curl-bottom-left {
+    @include curl-bottom-left();
+  }
+}
+ */

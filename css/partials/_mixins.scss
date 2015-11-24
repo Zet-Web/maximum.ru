@@ -1,0 +1,787 @@
+@mixin size($width, $height: $width) {
+   width: $width;
+   height: $height;
+}
+
+@mixin char_text($font_size, $line-height, $color) {
+   font-size: $font_size;
+   line-height:$line-height ;
+   color: $color;
+}
+
+@mixin fchar_text($font_size, $line-height, $color, $font_family) {
+   font-size: $font_size;
+   line-height:$line-height ;
+   color: $color;
+   font-family: $font_family, sans-serif;
+}
+
+@mixin fchar_text_serif($font_size, $line-height, $color, $font_family) {
+   font-size: $font_size;
+   line-height:$line-height ;
+   color: $color;
+   font-family: $font_family, serif;
+}
+
+
+%overcut {
+   text-overflow: ellipsis;
+   vertical-align: top;
+   white-space: nowrap;
+   overflow: hidden;
+   display: inline-block;
+}
+
+@mixin image-2x($image, $width, $height) {
+   @media (min--moz-device-pixel-ratio: 1.3),
+   (-o-min-device-pixel-ratio: 2.6/2),
+   (-webkit-min-device-pixel-ratio: 1.3),
+   (min-device-pixel-ratio: 1.3),
+   (min-resolution: 1.3dppx) {
+      /* on retina, use image that's scaled by 2 */
+      background-image: url($image);
+      background-size: $width $height;
+   }
+}
+
+%center {
+   margin-left: auto;
+   margin-right: auto;
+   display: block;
+}
+
+
+@mixin placeholder {
+   &::-webkit-input-placeholder { @content; }
+   &:-moz-placeholder { @content; }
+   &::-moz-placeholder { @content; }
+   &::-webkit-input-placeholder { @content; }
+   &:-ms-input-placeholder { @content; }
+}
+
+
+
+// =============================================================================
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+   $index: str-index($string, $search);
+
+   @if $index {
+      @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+   }
+
+   @return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+   $src: null;
+
+   $extmods: (
+       eot: "?",
+       svg: "#" + str-replace($name, " ", "_")
+   );
+
+   $formats: (
+       otf: "opentype",
+       ttf: "truetype"
+   );
+
+   @each $ext in $exts {
+      $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+      $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+      $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+   }
+
+   @font-face {
+      font-family: quote($name);
+      font-style: $style;
+      font-weight: $weight;
+      src: $src;
+   }
+}
+
+/* @include font-face(Samplino, fonts/Samplino);*/
+
+
+/**
+ * Pseudo Content Mixin
+ *
+ * Allows for easy pseudo elements
+ * @author Josh Frankel <josh@joshfrankel.me>
+ */
+@mixin pseudo-content ($pseudo, $url, $width, $height, $position: 0 0 no-repeat) {
+   // Make sure the parent is relative or else we will be positioning
+   // absolute for the pseudo element on the page width
+   position: relative;
+
+   // String interpolation and parent selector
+   &:#{$pseudo} {
+   background: url($url) $position;
+   content: '';
+   display: inline-block;
+   position: absolute;
+   height: $height;
+   width: $width;
+}
+}
+
+// Example usage
+
+/*
+
+.sidebar {
+	@include pseudo-content ('before', 'images/icon-twitter.png', 20px, 20px, 0 0 no-repeat);
+}
+
+*/
+
+/* The mixin creates both of these rules by being placed inside .sidebar */
+.pseudo-el-text {
+   position: relative;
+}
+
+/* The parent selector output */
+.pseudo-el:before {
+   background: url("") 0 0 no-repeat;
+   content: '';
+   display: inline-block;
+   position: absolute;
+   height: 20px;
+   width: 20px;
+}
+
+/*** Mixin For Colors ***/
+@mixin colors($text, $background, $border) {
+   color: $text;
+   background-color: $background;
+   border-color: $border;
+}
+
+/*** Mixin For Button ***/
+
+@mixin button($padding,$bg-color,$font-color,$font-size,$font-weight,$hover-color,$borderradius)
+{
+   border:0px;
+   margin:0px;
+   display:inline-block;
+   padding:$padding;
+   background:$bg-color;
+   color:$font-color;
+   font-size:$font-size;
+   font-weight:$font-weight;
+   -webkit-border-radius: $borderradius;
+   -moz-border-radius: $borderradius;
+   border-radius: $borderradius;
+   text-decoration:none;
+   cursor:pointer;
+   &:before, &:after
+   {
+      content: "";
+      display: table;
+   }
+   &:after
+   {
+      clear: both;
+   }
+   &:hover
+   {
+      background:$hover-color;
+   }
+}
+
+/***
+@include button(15px 10px, #333333, #ffffff, 16px, bold, lighten(#333333,5%),10px);
+
+@include button(padding, bgcolor, font-color, font-size, font-weight, hover-color, borderradius);
+
+
+
+***/
+
+
+/*
+ * Letter spacing function declaration
+ *
+ * Function accepts a value and then calculates the letter-spacing in em units
+ *
+ * @author Josh Frankel <josh@joshfrankel.me>
+ */
+@function letter-spacing ($value) {
+
+   // If the letter-spacing $value is negative
+   @if $value < 0 {
+
+      // Convert to negative and then change unit type to em
+      @return ($value * -1 / 1000) * -1em;
+   }
+
+      // If the letter-spacing $value is equal to zero
+   @else if $value == 0{
+
+      // return value unaltered
+      @return $value;
+   }
+
+      // Else the $value must be positive
+   @else {
+
+      // Calculate the letter-spacing and change unit to em
+      @return ($value / 1000) * 1em;
+   }
+}
+
+// Example Styles
+h1.test-letter {
+   // Call the letter-spacing function and pass in 50 as the $value
+   letter-spacing: letter-spacing(50);
+}
+
+/* The calculated letter spacing */
+h1.test-letter {
+   letter-spacing: 0.05em;
+}
+
+
+
+
+/**
+ * Flexible Images - Гибкие картинки
+ */
+%flexible-images {
+   height:auto;
+   width: 100%;
+}
+
+// Example calls to the placeholder
+/*
+.container img {
+  @extend %flexible-images;
+}
+.sidebar img {
+  @extend %flexible-images;
+}
+footer .menu img {
+  @extend %flexible-images;
+}
+*/
+/* All styles are combined since they all use the same placeholder *//*
+
+.container img,
+.sidebar img,
+footer .menu img {
+  height:auto;
+  width: 100%;
+}
+*/
+
+
+
+/* All styles are combined since they all use the same placeholder */
+%bg-image {
+   width: 100%;
+   background-position: center center;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.image-one {
+   @extend %bg-image;
+   background-image:url("");
+}
+
+
+/* ЗАПОЛНИТЕЛЬ
+============================================= */
+
+%btn {
+   padding: 10px;
+   color:#fff;
+   curser: pointer;
+   border: none;
+   shadow: none;
+   font-size: 14px;
+   width: 150px;
+   margin: 5px 0;
+   text-align: center;
+   display: block;
+}
+
+/* ПРИМЕСЬ КНОПКИ
+============================================= */
+
+@mixin  btn-background($btn-background) {
+   @extend %btn;
+   background-color: $btn-background;
+   &:hover {
+      background-color: lighten($btn-background,10%);
+   }
+}
+
+/* КНОПКИ
+============================================= */
+
+.cta-btn {
+   @include btn-background(green);
+}
+
+.main-btn {
+   @include btn-background(orange);
+}
+
+.info-btn {
+   @include btn-background(blue);
+}
+
+
+/*Вычисления*/
+@function calculate-width ($col-span) {
+   @return 100% / $col-span
+}
+
+.span-two {
+   width: calculate-width(2); // spans 2 columns, width = 50%
+}
+
+.span-three {
+   width: calculate-width(3); // spans 3 columns, width = 33.3%
+}
+
+
+/* Reset rem to 10-based instead of default browser 16 */
+/*html {
+	font-size: 62.5%;
+}*/
+
+/*
+  Photoshop does not apply line height to the first row, which CSS does. This creates all kinds of havock.
+  To calculate the correct offset for the first line we need the font-size and the lineheight, i.e:
+
+  @include line-height(22,30);
+
+  in Photoshop points/px (but with no unit)
+*/
+@mixin line-height($fontsize, $lineheight ){
+
+   line-height: ($lineheight) + px;
+   line-height: ($lineheight/10) + rem;
+
+   margin-top: (($lineheight - $fontsize)/2 * -1) + px;
+   margin-top: ((($lineheight - $fontsize)/2 * -1) / 10 ) + rem
+}
+
+/* Letter spacing is simpler.. stolen from somewhere */
+@mixin letter-spacing($letterspacing) {
+   letter-spacing: $letterspacing/1000;
+}
+
+/* font-size to rem with backup, stolen from somewhere */
+@mixin rem-size($sizeValue: 16) {
+   font-size: ($sizeValue) + px;
+   font-size: ($sizeValue/10) + rem;
+}
+
+
+
+/* Mixin */
+/* Mixin VERTICAL ALIGN */
+@mixin vertical-align {
+   position: relative;
+   top: 50%;
+   -webkit-transform: translateY(-50%);
+   -ms-transform: translateY(-50%);
+   transform: translateY(-50%);
+}
+
+.element p {
+   @include vertical-align;
+}
+
+/* Placeholder selector */
+%vertical-align {
+   position: relative;
+   top: 50%;
+   -webkit-transform: translateY(-50%);
+   -ms-transform: translateY(-50%);
+   transform: translateY(-50%);
+}
+
+.element p {
+   @extend %vertical-align;
+}
+
+
+/* MIXIN CENTERER ABSOLUTELY */
+@mixin centerer {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   -webkit-transform: translateY(-50%, -50%);
+   -ms-transform: translateY(-50%, -50%);
+   transform: translateY(-50%, -50%);
+}
+
+@mixin center_2($pos:both ) {
+   position: absolute;
+
+   @if ($pos==both) {
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translateY(-50%, -50%);
+      -ms-transform: translateY(-50%, -50%);
+      transform: translateY(-50%, -50%);
+
+   } @else if ($pos==top) {
+      left: 50%;
+      -webkit-transform: translateY(-50%, 0);
+      -ms-transform: translateY(-50%, 0);
+      transform: translateY(-50%, 0);
+
+   } @else if ($pos==left) {
+      top: 50%;
+      -webkit-transform: translateY(-50%, 0);
+      -ms-transform: translateY(-50%, 0);
+      transform: translateY(-50%, 0);
+   } @else if ($pos==right) {
+      top: 50%;
+      right:0;
+      -webkit-transform: translateY(-50%, 0);
+      -ms-transform: translateY(-50%, 0);
+      transform: translateY(-50%, 0);
+   } @else if ($pos==bottom) {
+      bottom: 0;
+      left:50%;
+      -webkit-transform: translateY(-50%, 0);
+      -ms-transform: translateY(-50%, 0);
+      transform: translateY(-50%, 0);
+   }
+}
+
+.child {
+   @include centerer;
+}
+
+.parent {
+   position: relative;
+   background: #f06d06;
+   width: 50%;
+   height: 200px;
+   margin: 20px auto;
+}
+
+
+@mixin center($horizontal: true, $vertical: true) {
+   position: absolute;
+
+   @if ($horizontal and $vertical) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+   } @else if ($horizontal) {
+      left: 50%;
+      transform: translate(-50%, 0);
+
+   } @else if ($vertical) {
+      top: 50%;
+      transform: translate(0, -50%);
+   }
+}
+.test-el {
+   @include center(true, false);
+}
+
+/*Another SCSS one with a different approach by Karl Merkli:
+@include rem-fallback(margin, 10, 20, 30, 40);
+*/
+@function strip-unit($num) {
+   @return $num / ($num * 0 + 1);
+}
+
+@mixin rem-fallback($property, $values...) {
+   $max: length($values);
+   $pxValues: '';
+   $remValues: '';
+
+   @for $i from 1 through $max {
+      $value: strip-unit(nth($values, $i));
+      $pxValues: #{$pxValues + $value*16}px;
+
+      @if $i < $max {
+         $pxValues: #{$pxValues + " "};
+      }
+   }
+
+   @for $i from 1 through $max {
+      $value: strip-unit(nth($values, $i));
+      $remValues: #{$remValues + $value}rem;
+
+      @if $i < $max {
+         $remValues: #{$remValues + " "};
+      }
+   }
+
+   #{$property}: $pxValues;
+   #{$property}: $remValues;
+}
+
+
+/* @include rem-fallback(margin, 10, 20, 30, 40); */
+
+
+// triangle mixin
+@mixin triangle_2 ($size, $color, $direction) {
+   height: 0;
+   width: 0;
+
+   $width: nth($size, 1);
+   $height: nth($size, length($size));
+
+   $foreground-color: nth($color, 1);
+   $background-color: if(length($color) == 2, nth($color, 2), transparent);
+
+   @if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left) {
+
+      $width: $width / 2;
+      $height: if(length($size) > 1, $height, $height/2);
+
+      @if $direction == up {
+         border-bottom: $height solid $foreground-color;
+         border-left: $width solid $background-color;
+         border-right: $width solid $background-color;
+
+      } @else if $direction == right {
+         border-bottom: $width solid $background-color;
+         border-left: $height solid $foreground-color;
+         border-top: $width solid $background-color;
+
+      } @else if $direction == down {
+         border-left: $width solid $background-color;
+         border-right: $width solid $background-color;
+         border-top: $height solid $foreground-color;
+
+      } @else if $direction == left {
+         border-bottom: $width solid $background-color;
+         border-right: $height solid $foreground-color;
+         border-top: $width solid $background-color;
+      }
+   }
+
+   @else if ($direction == up-right) or ($direction == up-left) {
+      border-top: $height solid $foreground-color;
+
+      @if $direction == up-right {
+         border-left:  $width solid $background-color;
+
+      } @else if $direction == up-left {
+         border-right: $width solid $background-color;
+      }
+   }
+
+   @else if ($direction == down-right) or ($direction == down-left) {
+      border-bottom: $height solid $foreground-color;
+
+      @if $direction == down-right {
+         border-left:  $width solid $background-color;
+
+      } @else if $direction == down-left {
+         border-right: $width solid $background-color;
+      }
+   }
+
+   @else if ($direction == inset-up) {
+      border-color: $background-color $background-color $foreground-color;
+      border-style: solid;
+      border-width: $height $width;
+   }
+
+   @else if ($direction == inset-down) {
+      border-color: $foreground-color $background-color $background-color;
+      border-style: solid;
+      border-width: $height $width;
+   }
+
+   @else if ($direction == inset-right) {
+      border-color: $background-color $background-color $background-color $foreground-color;
+      border-style: solid;
+      border-width: $width $height;
+   }
+
+   @else if ($direction == inset-left) {
+      border-color: $background-color $foreground-color $background-color $background-color;
+      border-style: solid;
+      border-width: $width $height;
+   }
+}
+
+// colors
+$red: #f8683d;
+$gray: #464e51;
+$blue: #0085d9;
+$green: #34d679;
+$purple: #d478fc;
+$yellow: #efc92e;
+
+
+
+
+/*
+
+.arrow-right {
+  @include triangle(32px 24px, $purple, right);
+}
+
+
+.box-shadow {
+  width: 300px;
+  margin: 2em auto;
+  background-color: $gray;
+  box-shadow: 1px 1px 0 white;
+  color: #fff;
+  padding: 20px;
+  position: relative;
+
+  &:before {
+    content: '';
+    @include triangle(32px, white, down);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -16px;
+  }
+
+  &:after {
+    content: '';
+    @include triangle(30px, $gray, down);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -15px;
+  }
+}*/
+/*======= END TRIANGLE MIXIN ========*/
+
+/*Mixin округления бордюра*/
+
+@mixin circle($size) {
+   width: $size;
+   height: $size;
+   border-radius: 100%;
+}
+
+
+/*MIXIN Наведение на ссылки, hover active focus */
+@mixin linkColor($color) {
+   color: $color;
+   &:hover, &:active, &:focus {
+      color: lighten($color, 20%);
+   }
+}
+
+/*Mixin Absolute Position*/
+@mixin absolute ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+   position: absolute;
+   top: $top;
+   right: $right;
+   bottom: $bottom;
+   left: $left;
+}
+
+/*Mixin Для вставки REM единицы Font-size*/
+@mixin fontsize($size: 24, $base: 16) {
+   font-size: $size + px;
+   font-size: ($size / $base) * 1rem;
+}
+
+/*MIXIN Для Media Queries*/
+
+@mixin bp-large {
+   @media only screen and (max-width: 60em) {
+      @content;
+   }
+}
+
+@mixin bp-medium {
+   @media only screen and (max-width: 40em) {
+      @content;
+   }
+}
+
+@mixin bp-small {
+   @media only screen and (max-width: 30em) {
+      @content;
+   }
+}
+
+/*Mixin скрывает текст Hide text*/
+@mixin hide-text{
+   font: 0/0 a;
+   text-shadow: none;
+   color: transparent;
+}
+
+/*Mixin Navigation List - Список навигации Применяется для <UL>*/
+@mixin navigation-list {
+   list-style-type:none;
+   padding:0;
+   margin:0;
+   overflow:hidden;
+   > li{
+      display:block;
+      float:left;
+      &:last-child{
+         margin-right:0px;
+      }
+   }
+}
+
+
+/*Hover Acive Focus*/
+@mixin hoverActiveFocus($property, $value) {
+   &:hover, &:active, &:focus {
+      #{$property}: $value;
+   }
+}
+
+
+/*** PADDING MIXIN***/
+@mixin pad ($pads...) {
+   padding: $pads;
+}
+
+/*** MARGIN MIXIN***/
+@mixin mar ($mars...) {
+   padding: $mars;
+}
+
+/*** LINK MIXIN***/
+@mixin linx ($link, $visit, $hover, $active) {
+   a {
+      color: $link;
+      &:visited {
+         color: $visit;
+      }
+      &:hover {
+         color: $hover;
+      }
+      &:active {
+         color: $active;
+      }
+   }
+}
+
+.a {
+   @include size(100px, 100px);
+   @include char_text(16px, 20px, #FFF);
+   border: 1px solid #000;
+   background-color: #333333;
+   margin: 10px 0 0 10px;
+   padding: 10px 0 0 10px;
+   float:none;
+
+}

@@ -1,0 +1,49 @@
+%header#header
+  %nav.navbar.navbar-fixed-top
+    .container
+      .row
+        .col-md-2
+          .logo
+            %a(href="/index.html" )
+              %img(src="images/logo.png")
+        .col-md-7
+          #music_player.player
+            .inner.clearfix
+              .logo-artist
+                %img(src="images/logo-artist.png" )
+              .now-playing
+                %p.now-playing-label Сейчас играет
+                %a.play-btn(href="#" )
+                %span.name-artist Linkin Park - Bleed it out
+                .volume
+                  %a.trigger-volume(href="#" )
+                  .line-track
+                  %span.percent-volume 80%
+              .choose-station
+                %a.choose-st-btn(href="#" ) Выбрать станцию
+        .col-md-3
+          .share-box
+            .row-social
+              %a.vk-share(href="#" )
+              %a.fb-share(href="#" )
+              %a.tw-share(href="#" )
+              %a.youtube-share(href="#" )
+              %a.inst-share(href="#" )
+              %a.get-app-andr(href="#" )
+              %a.get-app-ios(href="#" )
+              %a.get-app-windows(href="#" )
+#nav-menu
+  .container
+    %ul
+      %li.alpha
+        %a(href="#") Новости
+      %li
+        %a(href="#") Музыка
+      %li
+        %a(href="#") Программы
+      %li
+        %a(href="#") Викторины и конкурсы
+      %li
+        %a(href="#") О радио
+      %li
+        %a(href="#") Слушать радио

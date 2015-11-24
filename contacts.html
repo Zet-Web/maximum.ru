@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="">
+  <![endif]-->
+  <!--[if IE 7]>
+  <html class="no-js lt-ie9 lt-ie8" lang="">
+    <![endif]-->
+    <!--[if IE 8]>
+    <html class="no-js lt-ie9" lang="">
+      <![endif]-->
+      <!--[if gt IE 8]>
+      >
+      <! <![endif]-->
+      <html class="no-js" lang="">
+        <!-- <![endif] -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+
+$(function() {
+  $("head").load("partials/head.html");
+  $("#header").load("partials/header.html");
+  $("#menu-wrapper").load("partials/nav.html");
+  $("#footer").load("partials/footer.html");
+});
+
+</script>
+
+        <script type="text/javascript">
+
+
+function detectmob() {
+    if( navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)
+    ){
+    return true;
+    }
+    else {
+    return false;
+    }
+    }
+var mob = detectmob();
+function initialize() {
+    var styles = [ { "stylers": [ { saturation: -100 } ] } ];
+    var styledMap = new google.maps.StyledMapType(styles,
+    {name: "Maximum"});
+
+    var myLatlng = new google.maps.LatLng( 55.787402, 37.499349);
+
+    var mapOptions = {
+    zoom: 17,
+    center: myLatlng,
+    scrollwheel : false,
+    draggable: (mob?false:true),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    var map = new google.maps.Map(document.getElementById('map-1'), mapOptions);
+
+    map.mapTypes.set('map_style', styledMap);
+    map.setMapTypeId('map_style');
+
+    var goldStar = {
+    path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
+    scale: 5,
+    strokeColor: "black",
+    strokeWeight: 3
+    };
+
+
+    var marker = new google.maps.Marker({
+    position: myLatlng,
+    fillColor: "yellow",
+    map: map,
+    title:"Maximum",
+    icon: "images/pins.png"
+    })
+    }
+function loadScript() {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
+    'callback=initialize';
+    document.body.appendChild(script);
+    }
+
+window.onload = loadScript;
+
+
+
+</script>
+
+<head>
+        <meta charset="utf-8"></head>
+
+<body class="contact">
+        <header id="header"></header>
+        <div id="menu-wrapper"></div>
+        <!--[if lt IE 8]>
+        <p class="browserupgrade">
+          You are using an <strong>outdated</strong>
+          browser. Please
+          <a href="http://browsehappy.com/">upgrade your browser</a>
+          to improve your experience.
+        </p>
+        <![endif]-->
+        <div id="content">
+          <div class="container">
+            <div class="row inside_page contacts-page clearfix">
+              <div class="col-xs-12">
+
+                <div class="cont-label">
+                  <h4>Контакты</h4>
+
+                </div>
+
+                <div class="right-c">
+                  <div class="info-box info-box-1">
+                    <div class="sub-title">Главный офис:</div>
+                    <p>Тел.: (499) 579-77-09</p>
+                    <p>Факс: (499) 579-77-07</p>
+                    <p>
+                      e-mail:
+                      <a href="mailto:admin@mail.ru" class="mail">radio@maximum.ru</a>
+                    </p>
+                    <p>
+                      Поддержка сайта:
+                      <a href="mailto:admin@mail.ru" class="mail">rmgsupport@gmail.com</a>
+                    </p>
+                  </div>
+                  <div class="info-box info-box-2">
+                    <div class="sub-title">Департамент регионального развития:</div>
+                    <p>Тел: (499) 579-77-09 (доб 11-41)</p>
+                    <p>
+                      E-mail:
+                      <a href="mailto:admin@mail.ru" class="mail">region@rr.ru</a>
+                    </p>
+                    <p>Директор регионального развития - Прохоров Валентин</p>
+                  </div>
+
+                  <div class="clearfix"></div>
+
+                  <div class="info-box info-box-3">
+                    <div class="sub-title">Адрес:</div>
+                    <p>
+                      123298, Москва, 3-я Хорошевская улица, д. 12
+                      <br>
+                      Проезд до станции метро «Октябрьское поле». Последний вагон из центра.
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- .container -->
+          <div class="map" id="map-1"></div>
+        </div>
+        <!-- .content -->
+        <footer class="footer" id="footer"></footer>
+</body>
+
+      </html>

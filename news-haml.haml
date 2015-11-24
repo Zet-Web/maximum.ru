@@ -1,0 +1,190 @@
+!!!
+/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="">
+/[if IE 7] <html class="no-js lt-ie9 lt-ie8" lang="">
+/[if IE 8] <html class="no-js lt-ie9" lang="">
+/[if gt IE 8] ><!
+%html.no-js{:lang => ""}
+  / <![endif]
+  %head
+    %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"}
+    :javascript
+      $(function() {
+        $("head").load("partials/head.html");
+        $("#header").load("partials/header.html");
+        $("#menu-wrapper").load("partials/nav.html");
+        $("#footer").load("partials/footer.html");
+      });
+    %meta{:charset => "utf-8"}/
+  %body
+    %header#header
+    #menu-wrapper
+    /[if lt IE 8]
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    #content
+      .container
+        .row.inside_page.news_page.clearfix
+          .col-md-12
+            .left_c
+              .news-page
+                #news_maximum
+                  / Nav tabs
+                  %ul.nav.nav-tabs
+                    %li.active.current_page_item
+                      %a{"data-toggle" => "tab", :href => "#maximum_news"} Новости MAXIMUM
+                    %li
+                      %a{"data-toggle" => "tab", :href => "#maximum_music_news"} Музыкальные новости
+                  .tab-content
+                    #maximum_news.tab-pane.fade.in.active
+                      .single-view
+                        %a{:href => "#/"}
+                          %img{:src => "images/baner-2.png"}/
+                        %a{:href => "#/"}
+                          .title-new High society Шоу на кухне!
+                          .date-new 27 июля 2015
+                      .half-view
+                        .col-md-6.baner-box
+                          %a{:href => "#/"}
+                            %img{:src => "images/new-1.png"}/
+                          %a{:href => "#/"}
+                            .title-new
+                              Фестиваль STRANGEL AIR в Москве
+                            .date-new 27 июля 2015
+                        .col-md-6.baner-box
+                          %a{:href => "#/"}
+                            %img{:src => "images/new-2.png"}/
+                          %a{:href => "#/"}
+                            .title-new
+                              Выигрывайте пиццу в рубрике “Чужой против Хищника”!
+                            .date-new 27 июля 2015
+                        .col-md-6.baner-box
+                          %a{:href => "#/"}
+                            %img{:src => "images/new-3.png"}/
+                          %a{:href => "#/"}
+                            .title-new
+                              Фестиваль STRANGEL AIR в Москве
+                            .date-new 27 июля 2015
+                        .col-md-6.baner-box
+                          %a{:href => "#/"}
+                            %img{:src => "images/new-4.png"}/
+                          %a{:href => "#/"}
+                            .title-new
+                              Выигрывайте пиццу в
+                            .date-new 27 июля 2015
+                        .col-md-6.baner-box
+                          %a{:href => "#/"}
+                            %img{:src => "images/new-5.png"}/
+                          %a{:href => "#/"}
+                            .title-new
+                              Фестиваль STRANGEL
+                            .date-new 27 июля 2015
+                        .col-md-6.baner-box
+                          %a{:href => "#/"}
+                            %img{:src => "images/new-5.png"}/
+                          %a{:href => "#/"}
+                            .title-new
+                              Выигрывайте пиццу в рубрике “Чужой против Хищника”!
+                            .date-new 27 июля 2015
+                      .pages-navchain
+                        %hr.separator/
+                        %nav.navigation
+                          %ul.pager
+                            %li.previous
+                              %a{:href => "#"} 1
+                            %li.current-page
+                              %a{:href => "#"} 2
+                            %li
+                              %a{:href => "#"} 3
+                            %li
+                              %a{:href => "#"} 4
+                            %li
+                              %a{:href => "#"} 5
+                            %li
+                              %a{:href => "#"} 6
+                            %li.next
+                              %a{:href => "#"} 100
+                    / maximum-news
+                    #maximum_music_news.tab-pane.fade
+                  / tab-content
+                / #news-maximum
+              / .news-page
+            / .left-c
+            .right_c
+              .afisha-box
+                .title Афиша мероприятий
+                .row-single.clearfix
+                  %a{:href => "#/"}
+                    %img{:src => "images/afisha-1.jpg"}/
+                  .text-info
+                    %a{:href => "#/"}
+                      .title 3 Doors Down Крокус Сити Холл
+                      .date 27 июля 2015
+                .row-single.clearfix
+                  %a{:href => "#/"}
+                    %img{:src => "images/afisha-1.jpg"}/
+                  .text-info
+                    %a{:href => "#/"}
+                      .title 3 Doors Down Крокус Сити Холл
+                      .date 27 июля 2015
+                .row-single.clearfix
+                  %a{:href => "#/"}
+                    %img{:src => "images/afisha-1.jpg"}/
+                  .text-info
+                    %a{:href => "#/"}
+                      .title 3 Doors Down Крокус Сити Холл
+                      .date 27 июля 2015
+                .row-single.clearfix
+                  %a{:href => "#/"}
+                    %img{:src => "images/afisha-1.jpg"}/
+                  .text-info
+                    %a{:href => "#/"}
+                      .title 3 Doors Down Крокус Сити Холл
+                      .date 27 июля 2015
+                .row-single.clearfix
+                  %a{:href => "#/"}
+                    %img{:src => "images/afisha-1.jpg"}/
+                  .text-info
+                    %a{:href => "#/"}
+                      .title 3 Doors Down Крокус Сити Холл
+                      .date 27 июля 2015
+                .row-single.clearfix
+                  %a{:href => "#/"}
+                    %img{:src => "images/afisha-1.jpg"}/
+                  .text-info
+                    %a{:href => "#/"}
+                      .title 3 Doors Down Крокус Сити Холл
+                      .date 27 июля 2015
+                %a.all-afish{:href => "#/"} Все афиши
+              %br/
+              .newest-of-week
+                .title Новинки недели
+                #player.right-side-player.clearfix
+                  .logo-song
+                    %img{:alt => "Linkin Park", :src => "images/logo-artist.png"}/
+                  .detailes-song
+                    .name-song
+                      %a#play-btn{:href => "#"}
+                        %img{:height => "11", :src => "images/gray-play-btn.png", :width => "8"}/
+                      Linkin Park - Bleed it out
+                    .volume
+                      %a#disable-volume.disable-volume{:href => "#/"}
+                        %img{:height => "10", :src => "images/gray-volume-btn.png", :width => "12"}/
+                      %img{:height => "2", :src => "images/line-track-min.jpg", :width => "159"}/
+                    .toggler
+                      %a#prev-track.switch-btn{:href => ""}
+                        %img{:alt => "", :src => "images/player-left-swithcer.png"}/
+                      .count-track
+                        %span.now-played 1
+                        %i.divider /
+                        %span.total-count 40
+                      %a#next-track.switch-btn{:href => ""}
+                        %img{:alt => "", :src => "images/player-right-switcher.png"}/
+                / #Player
+                %hr/
+                %a.link-to-all{:href => ""} Все афиши
+              / Новинки недели
+              .top-block-baner
+                %a{:href => "#/"}
+                  %img{:height => "400", :src => "images/delfin.jpg", :width => "240"}/
+      / .container
+    / .content
+    %footer#footer.footer
