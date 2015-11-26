@@ -11295,3 +11295,124 @@ a:hover, a:active, a:focus {
   color: #333333;
   font-family: "ConquerorSansLight", sans-serif;
 }
+
+/* line 31, ../scss/added.scss */
+#links {
+  display: none;
+}
+
+/* line 35, ../scss/added.scss */
+.vote-table {
+  background: none;
+}
+/* line 36, ../scss/added.scss */
+.vote-table #play-box {
+  width: 55px;
+  height: 55px;
+  background-color: #d5662d;
+}
+/* line 41, ../scss/added.scss */
+.vote-table #play-box #play-pause {
+  background: url("../images/play-15.png") no-repeat;
+  background-position: cover;
+}
+/* line 47, ../scss/added.scss */
+.vote-table tr {
+  content: "";
+}
+/* line 48, ../scss/added.scss */
+.vote-table tr td {
+  content: "";
+  width: 25%;
+}
+/* line 49, ../scss/added.scss */
+.vote-table tr td:nth-of-type(1) {
+  width: 79px;
+}
+/* line 50, ../scss/added.scss */
+.vote-table tr td:nth-of-type(2) {
+  width: 395px;
+}
+/* line 51, ../scss/added.scss */
+.vote-table tr td:nth-of-type(3) {
+  width: 80px;
+}
+/* line 52, ../scss/added.scss */
+.vote-table tr td:nth-of-type(4) {
+  width: 150px;
+}
+/* line 53, ../scss/added.scss */
+.vote-table tr td .number {
+  content: "";
+  display: block;
+}
+/* line 57, ../scss/added.scss */
+.vote-table tr td div {
+  content: "";
+}
+/* line 58, ../scss/added.scss */
+.vote-table tr td div .media-btn {
+  content: "";
+}
+/* line 63, ../scss/added.scss */
+.vote-table tr td .song-data {
+  content: "";
+}
+/* line 65, ../scss/added.scss */
+.vote-table tr td .song-data .album-cover {
+  content: "";
+}
+/* line 67, ../scss/added.scss */
+.vote-table tr td .song-data .album-cover img {
+  content: "";
+}
+/* line 72, ../scss/added.scss */
+.vote-table tr td .song-data .name-artist {
+  content: "";
+}
+/* line 74, ../scss/added.scss */
+.vote-table tr td .song-data .name-artist .link {
+  content: "";
+  color: #333;
+  font-family: "ConquerorSansMedium";
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+/* line 81, ../scss/added.scss */
+.vote-table tr td .song-data .name-artist .link .song-name {
+  content: "";
+  color: #999;
+  font-family: ConquerorSans;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+/* line 91, ../scss/added.scss */
+.vote-table tr td .song-data .name-artist .song-name {
+  content: "";
+}
+/* line 97, ../scss/added.scss */
+.vote-table tr td .status {
+  content: "";
+}
+/* line 99, ../scss/added.scss */
+.vote-table tr td .status .status-icon {
+  content: "";
+}
+/* line 101, ../scss/added.scss */
+.vote-table tr td .status .status-icon img {
+  content: "";
+}
+/* line 107, ../scss/added.scss */
+.vote-table tr td .link-box {
+  content: "";
+}
+/* line 109, ../scss/added.scss */
+.vote-table tr td .link-box .link-app {
+  content: "";
+}
+/* line 111, ../scss/added.scss */
+.vote-table tr td .link-box .link-app img {
+  content: "";
+}

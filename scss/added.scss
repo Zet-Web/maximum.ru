@@ -26,11 +26,104 @@
         @include fchar_text(16px, 20px, #333333, $light);
       }
     }
+}
 
-    #links {
-      display: none;
-    }
+#links {display: none;}
+#hitparad {
 
 }
 
+.vote-table { background: none;
+  .number {
+    color: #ccc;
+    font-family: ConquerorSansMedium;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 60px;
+    text-transform: uppercase;
+  }
+  #play-box {
+    width: 55px;
+    height: 55px;
+    background-color: #d5662d;
 
+    #play-pause {
+      background: url("../images/play-15.png") no-repeat;
+      background-position: cover;
+    }
+  }
+
+  tr {
+    td {
+      &:nth-of-type(1) {width: 79px;}
+      &:nth-of-type(2) {width: 395px;}
+      &:nth-of-type(3) {width:80px; }
+      &:nth-of-type(4) {width:150px;}
+      .number {
+        content: "";
+        display: block;
+
+      }
+
+      div { content: "";
+        .media-btn { content: "";
+
+        }
+      }
+
+      .song-data { content: "";
+
+        .album-cover { content: "";
+
+          img { content: "";
+
+          }
+        }
+
+        .name-artist { content: "";
+
+          .link { content: "";
+            color: #333;
+            font-family: $medium;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+
+            .song-name { content: "";
+              color: #999;
+              font-family: ConquerorSans;
+              font-size: 14px;
+              font-weight: 400;
+              text-transform: uppercase;
+
+            }
+          }
+
+          .song-name { content: "";
+
+          }
+        }
+      }
+
+      .status { content: "";
+
+        .status-icon { content: "";
+
+          img { content: "";
+
+          }
+        }
+      }
+
+      .link-box { content: "";
+
+        .link-app { content: "";
+
+          img { content: "";
+
+          }
+        }
+      }
+    }
+  }
+}
