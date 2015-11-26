@@ -1,0 +1,36 @@
+@charset "utf-8";
+/**
+ * HTML5 Boilerplate v5.0
+ * AUTHOR Zet-Web
+ * MIT License
+ */
+
+/**
+ *
+ * Imports
+ *
+ */
+@import "compass";
+@import "partials/_mixins";
+@import "partials/css3-mixins";
+@import "partials/utility-belt";
+@import "partials/_variables";
+@import "partials/_fonts";
+@import "animate/animate";
+@import "hover/hover";
+@import "partials/_defaults";
+
+#content {
+    .left_c {
+      .description  {
+        @include fchar_text(16px, 20px, #333333, $light);
+      }
+    }
+
+    #links {
+      display: none;
+    }
+
+}
+
+
