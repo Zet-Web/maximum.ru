@@ -23,7 +23,8 @@
 #content {
     .left_c {
       .description  {
-        @include fchar_text(16px, 20px, #333333, $light);
+         margin: 15px 0;
+         @include fchar_text(16px, 20px, #333333, $light);
       }
     }
 }
@@ -42,12 +43,26 @@
     line-height: 60px;
     text-transform: uppercase;
   }
+   td  {
+      border: 1px solid #f2f2f2;
+      border-collapse: collapse;
+      border-color: #f2f2f2;
+      padding: 15px 0;
+   }
+
+   tr:nth-of-type(2n+2) {
+      background: #f2f2f2;
+   }
   #play-box {
     width: 55px;
     height: 55px;
     background-color: #d5662d;
+     float: left;
+     text-align: center;
+     margin: 0 16px;
+     padding: 15px 0;
 
-    #play-pause {
+     #play-pause {
       background: url("../images/play-15.png") no-repeat;
       background-position: cover;
     }
@@ -55,10 +70,18 @@
 
   tr {
     td {
-      &:nth-of-type(1) {width: 79px;}
-      &:nth-of-type(2) {width: 395px;}
-      &:nth-of-type(3) {width:80px; }
-      &:nth-of-type(4) {width:150px;}
+      &:nth-of-type(1) {width: 70px;
+         text-align: center;
+      }
+      &:nth-of-type(2) {width: 395px;
+         padding: 0;
+      }
+      &:nth-of-type(3) {width:80px;
+         text-align: center;
+      }
+      &:nth-of-type(4) {width:150px;
+         text-align: center;
+      }
       .number {
         content: "";
         display: block;
@@ -67,25 +90,33 @@
 
       div { content: "";
         .media-btn { content: "";
+           height: 20px;
+           width: 15px;
 
         }
       }
 
       .song-data { content: "";
+         float: left;
+         width: 240px;
 
-        .album-cover { content: "";
+         .album-cover { content: "";
+            display: inline-block;
+            float: left;
+            margin-right: 20px;
 
-          img { content: "";
+            img { content: "";
 
           }
         }
 
         .name-artist { content: "";
+           float: left;
 
-          .link { content: "";
+           .link { content: "";
             color: #333;
             font-family: $medium;
-            font-size: 14px;
+             font-size: 14px !important;
             font-weight: 400;
             text-transform: uppercase;
 
@@ -100,6 +131,9 @@
           }
 
           .song-name { content: "";
+             font-size: 14px;
+             line-height: 20px;
+             text-transform: uppercase;
 
           }
         }
@@ -126,4 +160,9 @@
       }
     }
   }
+}
+
+.list-albums.hitparad {
+   padding-top: 1px;
+
 }

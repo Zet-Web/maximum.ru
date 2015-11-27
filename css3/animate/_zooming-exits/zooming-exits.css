@@ -1,8 +1,8 @@
 /*
 Error: Undefined mixin 'keyframes'.
-        on line 1 of E:/Dropbox/Work Projects/Maxim/Site/scss/animate/_zooming-exits/_zoomOut.scss, in `keyframes'
-        from line 1 of E:/Dropbox/Work Projects/Maxim/Site/scss/animate/_zooming-exits/_zoomOut.scss
-        from line 4 of E:/Dropbox/Work Projects/Maxim/Site/scss/animate/_zooming-exits/zooming-exits.scss
+        on line 1 of C:/www/home/localhost/www/maximum.ru/scss/animate/_zooming-exits/_zoomOut.scss, in `keyframes'
+        from line 1 of C:/www/home/localhost/www/maximum.ru/scss/animate/_zooming-exits/_zoomOut.scss
+        from line 4 of C:/www/home/localhost/www/maximum.ru/scss/animate/_zooming-exits/zooming-exits.scss
 
 1: // INDEX OF ZOOMING EXITS
 2: 
@@ -12,9 +12,9 @@ Error: Undefined mixin 'keyframes'.
 6:   "zoomOutLeft",
 
 Backtrace:
-E:/Dropbox/Work Projects/Maxim/Site/scss/animate/_zooming-exits/_zoomOut.scss:1:in `keyframes'
-E:/Dropbox/Work Projects/Maxim/Site/scss/animate/_zooming-exits/_zoomOut.scss:1
-E:/Dropbox/Work Projects/Maxim/Site/scss/animate/_zooming-exits/zooming-exits.scss:4
+C:/www/home/localhost/www/maximum.ru/scss/animate/_zooming-exits/_zoomOut.scss:1:in `keyframes'
+C:/www/home/localhost/www/maximum.ru/scss/animate/_zooming-exits/_zoomOut.scss:1
+C:/www/home/localhost/www/maximum.ru/scss/animate/_zooming-exits/zooming-exits.scss:4
 C:/tools/ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:349:in `block in visit_mixin'
 C:/tools/ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/tools/ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
@@ -72,4 +72,4 @@ C:/tools/ruby21/bin/compass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'keyframes'.\A         on line 1 of E:/Dropbox/Work Projects/Maxim/Site/scss/animate/_zooming-exits/_zoomOut.scss, in `keyframes'\A         from line 1 of E:/Dropbox/Work Projects/Maxim/Site/scss/animate/_zooming-exits/_zoomOut.scss\A         from line 4 of E:/Dropbox/Work Projects/Maxim/Site/scss/animate/_zooming-exits/zooming-exits.scss\A \A 1: // INDEX OF ZOOMING EXITS\A 2: \A 3: @import\A 4:   \"zoomOut\",\A 5:   \"zoomOutDown\",\A 6:   \"zoomOutLeft\","; }
+  content: "Error: Undefined mixin 'keyframes'.\A         on line 1 of C:/www/home/localhost/www/maximum.ru/scss/animate/_zooming-exits/_zoomOut.scss, in `keyframes'\A         from line 1 of C:/www/home/localhost/www/maximum.ru/scss/animate/_zooming-exits/_zoomOut.scss\A         from line 4 of C:/www/home/localhost/www/maximum.ru/scss/animate/_zooming-exits/zooming-exits.scss\A \A 1: // INDEX OF ZOOMING EXITS\A 2: \A 3: @import\A 4:   \"zoomOut\",\A 5:   \"zoomOutDown\",\A 6:   \"zoomOutLeft\","; }
