@@ -69,7 +69,7 @@ h1.test-letter {
 }
 
 /**
- * Flexible Images - ╨У╨╕╨▒╨║╨╕╨╡ ╨║╨░╤А╤В╨╕╨╜╨║╨╕
+ * Flexible Images - Гибкие картинки
  */
 /*
 .container img {
@@ -106,7 +106,7 @@ footer .menu img {
   background-image: url("");
 }
 
-/* ╨Ч╨Р╨Я╨Ю╨Ы╨Э╨Ш╨в╨Х╨Ы╨м
+/* ЗАПОЛНИТЕЛЬ
 ============================================= */
 /* line 302, ../scss/partials/_mixins.scss */
 .cta-btn, .main-btn, .info-btn {
@@ -122,9 +122,9 @@ footer .menu img {
   display: block;
 }
 
-/* ╨Я╨а╨Ш╨Ь╨Х╨б╨м ╨Ъ╨Э╨Ю╨Я╨Ъ╨Ш
+/* ПРИМЕСЬ КНОПКИ
 ============================================= */
-/* ╨Ъ╨Э╨Ю╨Я╨Ъ╨Ш
+/* КНОПКИ
 ============================================= */
 /* line 329, ../scss/partials/_mixins.scss */
 .cta-btn {
@@ -153,7 +153,7 @@ footer .menu img {
   background-color: #3333ff;
 }
 
-/*╨Т╤Л╤З╨╕╤Б╨╗╨╡╨╜╨╕╤П*/
+/*Вычисления*/
 /* line 347, ../scss/partials/_mixins.scss */
 .span-two {
   width: 50%;
@@ -265,13 +265,13 @@ footer .menu img {
   }
 }*/
 /*======= END TRIANGLE MIXIN ========*/
-/*Mixin ╨╛╨║╤А╤Г╨│╨╗╨╡╨╜╨╕╤П ╨▒╨╛╤А╨┤╤О╤А╨░*/
-/*MIXIN ╨Э╨░╨▓╨╡╨┤╨╡╨╜╨╕╨╡ ╨╜╨░ ╤Б╤Б╤Л╨╗╨║╨╕, hover active focus */
+/*Mixin округления бордюра*/
+/*MIXIN Наведение на ссылки, hover active focus */
 /*Mixin Absolute Position*/
-/*Mixin ╨Ф╨╗╤П ╨▓╤Б╤В╨░╨▓╨║╨╕ REM ╨╡╨┤╨╕╨╜╨╕╤Ж╤Л Font-size*/
-/*MIXIN ╨Ф╨╗╤П Media Queries*/
-/*Mixin ╤Б╨║╤А╤Л╨▓╨░╨╡╤В ╤В╨╡╨║╤Б╤В Hide text*/
-/*Mixin Navigation List - ╨б╨┐╨╕╤Б╨╛╨║ ╨╜╨░╨▓╨╕╨│╨░╤Ж╨╕╨╕ ╨Я╤А╨╕╨╝╨╡╨╜╤П╨╡╤В╤Б╤П ╨┤╨╗╤П <UL>*/
+/*Mixin Для вставки REM единицы Font-size*/
+/*MIXIN Для Media Queries*/
+/*Mixin скрывает текст Hide text*/
+/*Mixin Navigation List - Список навигации Применяется для <UL>*/
 /*Hover Acive Focus*/
 /*** PADDING MIXIN***/
 /*** MARGIN MIXIN***/
@@ -447,7 +447,7 @@ footer .menu img {
 */
 /*
 * Resizes all images in a given sprite
-* mixin courtesy of Wilker L├║cio https://gist.github.com/wilkerlucio/6442309
+* mixin courtesy of Wilker Lúcio https://gist.github.com/wilkerlucio/6442309
 * params: $only = if you want to list specific files instead of regenerating every image (ex. globe, checkmark)
 */
 /*
@@ -469,7 +469,7 @@ font-family: 'ConquerorSansThin';*/
   color: #dc854a;
 }
 
-/*╨Ю╨б╨Э╨Ю╨Т╨Э╨Р╨п ╨Ъ╨Э╨Ю╨Я╨Ъ╨Р ╨б╨в╨Ш╨Ы╨м ╨У╨╛╨╗╤Г╨▒╨╛╨╣-╤Ж╨▓╨╡╤В #11adfb */
+/*ОСНОВНАЯ КНОПКА СТИЛЬ Голубой-цвет #11adfb */
 /* line 39, ../scss/partials/_variables.scss */
 .btn-main {
   background: #11adfb none;
@@ -11290,96 +11290,124 @@ a:hover, a:active, a:focus {
 /*================== EXTENDS PROJECT START HERE ===============*/
 /* line 25, ../scss/added.scss */
 #content .left_c .description {
+  margin: 15px 0;
   font-size: 16px;
   line-height: 20px;
   color: #333333;
   font-family: "ConquerorSansLight", sans-serif;
 }
 
-/* line 31, ../scss/added.scss */
+/* line 32, ../scss/added.scss */
 #links {
   display: none;
 }
 
-/* line 35, ../scss/added.scss */
+/* line 37, ../scss/added.scss */
 .vote-table {
   background: none;
 }
-/* line 36, ../scss/added.scss */
+/* line 38, ../scss/added.scss */
+.vote-table .number {
+  color: #ccc;
+  font-family: ConquerorSansMedium;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 60px;
+  text-transform: uppercase;
+}
+/* line 46, ../scss/added.scss */
+.vote-table td {
+  border: 1px solid #f2f2f2;
+  border-collapse: collapse;
+  border-color: #f2f2f2;
+  padding: 15px 0;
+}
+/* line 53, ../scss/added.scss */
+.vote-table tr:nth-of-type(2n+2) {
+  background: #f2f2f2;
+}
+/* line 56, ../scss/added.scss */
 .vote-table #play-box {
   width: 55px;
   height: 55px;
   background-color: #d5662d;
+  float: left;
+  text-align: center;
+  margin: 0 16px;
+  padding: 15px 0;
 }
-/* line 41, ../scss/added.scss */
+/* line 65, ../scss/added.scss */
 .vote-table #play-box #play-pause {
   background: url("../images/play-15.png") no-repeat;
   background-position: cover;
 }
-/* line 47, ../scss/added.scss */
-.vote-table tr {
-  content: "";
-}
-/* line 48, ../scss/added.scss */
-.vote-table tr td {
-  content: "";
-  width: 25%;
-}
-/* line 49, ../scss/added.scss */
+/* line 73, ../scss/added.scss */
 .vote-table tr td:nth-of-type(1) {
-  width: 79px;
+  width: 70px;
+  text-align: center;
 }
-/* line 50, ../scss/added.scss */
+/* line 76, ../scss/added.scss */
 .vote-table tr td:nth-of-type(2) {
   width: 395px;
+  padding: 0;
 }
-/* line 51, ../scss/added.scss */
+/* line 79, ../scss/added.scss */
 .vote-table tr td:nth-of-type(3) {
   width: 80px;
+  text-align: center;
 }
-/* line 52, ../scss/added.scss */
+/* line 82, ../scss/added.scss */
 .vote-table tr td:nth-of-type(4) {
   width: 150px;
+  text-align: center;
 }
-/* line 53, ../scss/added.scss */
+/* line 85, ../scss/added.scss */
 .vote-table tr td .number {
   content: "";
   display: block;
 }
-/* line 57, ../scss/added.scss */
+/* line 91, ../scss/added.scss */
 .vote-table tr td div {
   content: "";
 }
-/* line 58, ../scss/added.scss */
+/* line 92, ../scss/added.scss */
 .vote-table tr td div .media-btn {
   content: "";
+  height: 20px;
+  width: 15px;
 }
-/* line 63, ../scss/added.scss */
+/* line 99, ../scss/added.scss */
 .vote-table tr td .song-data {
   content: "";
+  float: left;
+  width: 240px;
 }
-/* line 65, ../scss/added.scss */
+/* line 103, ../scss/added.scss */
 .vote-table tr td .song-data .album-cover {
   content: "";
+  display: inline-block;
+  float: left;
+  margin-right: 20px;
 }
-/* line 67, ../scss/added.scss */
+/* line 108, ../scss/added.scss */
 .vote-table tr td .song-data .album-cover img {
   content: "";
 }
-/* line 72, ../scss/added.scss */
+/* line 113, ../scss/added.scss */
 .vote-table tr td .song-data .name-artist {
   content: "";
+  float: left;
 }
-/* line 74, ../scss/added.scss */
+/* line 116, ../scss/added.scss */
 .vote-table tr td .song-data .name-artist .link {
   content: "";
   color: #333;
   font-family: "ConquerorSansMedium";
-  font-size: 14px;
+  font-size: 14px !important;
   font-weight: 400;
   text-transform: uppercase;
 }
-/* line 81, ../scss/added.scss */
+/* line 123, ../scss/added.scss */
 .vote-table tr td .song-data .name-artist .link .song-name {
   content: "";
   color: #999;
@@ -11388,31 +11416,39 @@ a:hover, a:active, a:focus {
   font-weight: 400;
   text-transform: uppercase;
 }
-/* line 91, ../scss/added.scss */
+/* line 133, ../scss/added.scss */
 .vote-table tr td .song-data .name-artist .song-name {
   content: "";
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
 }
-/* line 97, ../scss/added.scss */
+/* line 142, ../scss/added.scss */
 .vote-table tr td .status {
   content: "";
 }
-/* line 99, ../scss/added.scss */
+/* line 144, ../scss/added.scss */
 .vote-table tr td .status .status-icon {
   content: "";
 }
-/* line 101, ../scss/added.scss */
+/* line 146, ../scss/added.scss */
 .vote-table tr td .status .status-icon img {
   content: "";
 }
-/* line 107, ../scss/added.scss */
+/* line 152, ../scss/added.scss */
 .vote-table tr td .link-box {
   content: "";
 }
-/* line 109, ../scss/added.scss */
+/* line 154, ../scss/added.scss */
 .vote-table tr td .link-box .link-app {
   content: "";
 }
-/* line 111, ../scss/added.scss */
+/* line 156, ../scss/added.scss */
 .vote-table tr td .link-box .link-app img {
   content: "";
+}
+
+/* line 165, ../scss/added.scss */
+.list-albums.hitparad {
+  padding-top: 1px;
 }

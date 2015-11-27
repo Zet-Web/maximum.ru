@@ -2563,14 +2563,14 @@ a:hover, a:active, a:focus {
 /* Slider */
 /* line 40, ../scss/slick/slick-theme.scss */
 .slick-loading .slick-list {
-  background: #fff url('../images/ajax-loader.gif?1446042597') center center no-repeat;
+  background: #fff url('../images/ajax-loader.gif?1448582072') center center no-repeat;
 }
 
 /* Icons */
 @font-face {
   font-family: "slick";
-  src: url('../fonts/slick.eot?1446042780');
-  src: url('../fonts/slick.eot?&1446042780#iefix') format("embedded-opentype"), url('../fonts/slick.woff?1446042813') format("woff"), url('../fonts/slick.ttf?1446042655') format("truetype"), url('../fonts/slick.svg?1446042592#slick') format("svg");
+  src: url('../fonts/slick.eot?1448582072');
+  src: url('../fonts/slick.eot?&1448582072#iefix') format("embedded-opentype"), url('../fonts/slick.woff?1448582072') format("woff"), url('../fonts/slick.ttf?1448582072') format("truetype"), url('../fonts/slick.svg?1448582072#slick') format("svg");
   font-weight: normal;
   font-style: normal;
 }
